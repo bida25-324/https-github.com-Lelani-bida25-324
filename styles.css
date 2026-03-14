@@ -74,4 +74,24 @@ p {
     color: #915F6D;
     font-weight: bold;
   }
+
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th,td{
+  padding: 10px;
+  text-align: center;
+  border:1px solid #ccc;
+}
+
+th{
+  background-color:#f8c8dc;
+}
+
+tr:nth-child(even){
+  background-color:#fff0f5;
+}
     
