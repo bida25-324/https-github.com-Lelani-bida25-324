@@ -14,17 +14,6 @@ header {
   text-align: center;
 }
 
-header nav a{
-  background-color: #ffe6f0;
-  padding:8px 15px;
-  border-radius: 10px;
-}
-
-header nav a: hover{
-  background-color: #f8c8dc;
-    color: black;
-}
-
 header h1 {
   margin: 0;
 }
