@@ -98,9 +98,9 @@
     <td>Face Scrubbing</td>
     <td>Deep cleansing exfoliation treatment</td>
     <td>P200</td>
-    <td><button onclick="bookService('Face Scrubbing')">Book</button></td>
+    <td><button onclick="bookService('Face Scrubbing')">Book</button>
 
-        <form>
+        <form action="lelanisbeautyboutique@gmail.com" method="post" enctype="text/plain">
 
             <label>Name:</label><br>
             <input type="text" name="name"><br><br>
@@ -111,9 +111,13 @@
             <label>Message:</label><br>
             <textarea name="message"></textarea><br><br>
 
-            <input type="submit" value="Send">
+            <input type="hidden" name="service" value="Face Scrubbing">
+
+            <input type="submit">Book</button>
 
          </form>
+      
+    </td>
 
   </tr>
 
