@@ -80,13 +80,13 @@ p {
   }
 
 table {
-  width: 80%;
+  width: 100%;
   margin: auto;
   border-collapse: collapse;
 }
 
 th,td{
-  padding: 12px;
+  padding: 10px;
   text-align: center;
   border:1px solid #ddd;
 }
