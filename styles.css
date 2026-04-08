@@ -116,12 +116,18 @@ button{
     object-fit: cover;
   }
 
-  service-img {
+  .service-img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     display: block;
     margin: o auto;
+  }
+
+  td img {
+    width:100px;
+    height: 100px;
+    object-fit: cover;
   }
 
   form {
