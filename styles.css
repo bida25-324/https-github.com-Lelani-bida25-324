@@ -22,6 +22,14 @@ h2{
   text-alignment:center;
 }
 
+hero {
+  background-image:url('https://www.taymedispa.co.uk/wp-content/uploads/2016/11/facials-1024x630.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
