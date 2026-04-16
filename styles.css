@@ -18,7 +18,7 @@ header h1 {
   margin: 0;
 }
 
-welcome-box {
+.welcome-box {
   border: 2px solid #B57281;
   padding: 30px;
   margin: 40px auto;
@@ -30,7 +30,7 @@ welcome-box {
   cursor: pointer;
 }
 
-welcome-box button:hover {
+.welcome-box button:hover {
   background-color: #9a5f6e;
 }
 
@@ -39,7 +39,7 @@ h2{
   text-alignment:center;
 }
 
-hero {
+.hero {
   background-image:url('https://www.taymedispa.co.uk/wp-content/uploads/2016/11/facials-1024x630.jpg');
   background-size: cover;
   color: white;
@@ -105,7 +105,7 @@ p {
     border-radius: 10px;
   }
 
-img:hover {
+.img:hover {
   transform: scale(1.05);
 }
 
