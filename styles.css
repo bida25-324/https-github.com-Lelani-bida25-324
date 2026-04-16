@@ -89,6 +89,10 @@ p {
     border-radius: 10px;
   }
 
+img:hover {
+  transform: scale(1.05);
+}
+
   main a [href="lelanisbeautyboutique@gmail.com:"] {
     color: #915F6D;
     font-weight: bold;
