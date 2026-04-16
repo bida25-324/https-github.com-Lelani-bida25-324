@@ -88,7 +88,22 @@
     
     <main>
 
-        <img scr="file:///C:/Users/LELANI/Downloads/SHOP%20NOW.pdf">
+        <img id="slider" src="https://www.beautyscience.com.au/wp-content/uploads/2019/01/Beauty-Science-Clinical-Treatments.png" width="300">
+
+        <script>
+            let images = ["https://media.istockphoto.com/id/1321856038/photo/portrait-beautiful-young-woman-with-clean-fresh-skin.jpg?s=612x612&w=0&k=20&c=jP4pZTdV_7hHPMhFUaFNZSAbIDQAOUEcrMPMwSKFLqk.jpg", "https://st.depositphotos.com/1684571/1468/i/450/depositphotos_14680941-stock-photo-woman-receiving-facial-mask-at.jpg", "https://images.jdmagicbox.com/v2/comp/mumbai/d3/022pxx22.xx22.161111102906.h5d3/catalogue/nandini-s-beauty-care-sewri-mumbai-beauty-parlours-3eiqzmk55y.jpg"];
+            let index = 0;
+
+            function changeImage() {
+                index++;
+                if (index >= images.length) {
+                    index = 0;
+                }
+                    document.getElementById("slider").src = images[index];
+            }
+
+            setInterval(changeImage, 2000); // changes every 2 seconds
+        </script>
 
         <main class="container my-5">
             
