@@ -19,6 +19,7 @@ header h1 {
 }
 
 h2{
+  margin-bttom: 20px;
   text-alignment:center;
 }
 
@@ -28,6 +29,10 @@ hero {
   color: white;
   text-align: center;
   padding: 100px 20px;
+}
+
+section {
+  padding: 60px 20px;
 }
 
 nav a {
