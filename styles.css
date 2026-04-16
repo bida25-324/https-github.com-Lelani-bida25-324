@@ -21,20 +21,17 @@ header h1 {
 .welcome-box {
   border: 2px solid #B57281;
   color: #333;
-  background-color: rgba(255,255,255,0.6);
-  backdrop-filter: blur(8px);
+  background-color: #DE5D83;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 20px;
-  margin: 0 auto;
+  margin: 40 auto;
   width: 350px;
   text-align: center;
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15)
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0,1)
   cursor: pointer;
   position: relative;
   z-index: 2;
-  top: -100px;
   
 }
 
