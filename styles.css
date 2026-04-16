@@ -27,6 +27,11 @@ welcome-box {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0,1)
+  cursor: pointer;
+}
+
+welcome-box button:hover {
+  background-color: #9a5f6e;
 }
 
 h2{
