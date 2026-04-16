@@ -55,6 +55,7 @@ footer {
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
+  display: block;
 }
 
 p {
