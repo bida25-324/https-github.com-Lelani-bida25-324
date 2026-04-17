@@ -73,6 +73,12 @@ h2{
   border-radius: 10px;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 section {
   padding: 60px 20px;
 }
