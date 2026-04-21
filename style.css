@@ -84,6 +84,14 @@ h2{
   text-align: center;
 }
 
+.did-you-know {
+background-color: #B57281;
+}
+
+.working-hours {
+  background-color: #B57281;
+}
+
 section {
   padding: 60px 20px;
 }
