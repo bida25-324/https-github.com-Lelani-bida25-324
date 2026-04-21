@@ -163,7 +163,7 @@ p {
   }
 
 table {
-  width: 100%;
+  width: 120%;
   margin: auto;
   border-collapse: collapse;
 }
@@ -195,9 +195,11 @@ button{
   }
 
   .product-img {
-    width: 100%;
-    height: 200px;
+    width: 120%;
+    height: 120px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 
   .service-img {
