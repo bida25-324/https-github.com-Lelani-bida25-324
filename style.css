@@ -84,6 +84,10 @@ h2{
   text-align: center;
 }
 
+card {
+  background-color: #B57281;
+}
+
 section {
   padding: 60px 20px;
 }
