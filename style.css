@@ -82,7 +82,7 @@ h2{
   justify-content: space-between;
   align-items: flex-start;
   text-align: center;
-  background-img: https://static.independent.co.uk/2022/04/21/21/health%20and%20beauty.jpg?width=1200&height=800&crop=1200:800;
+  background: https://static.independent.co.uk/2022/04/21/21/health%20and%20beauty.jpg?width=1200&height=800&crop=1200:800 alt="";
 }
 
 section {
