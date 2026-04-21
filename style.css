@@ -119,12 +119,6 @@ main img {
   padding: 40px;
 }
 
-.info-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
 .content {
   width: 70%;
 }
