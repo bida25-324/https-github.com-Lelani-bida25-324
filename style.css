@@ -1,3 +1,24 @@
+#bg-slider {
+  postition: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px);
+  transform: scale(1.05);
+  z-index: -1;
+  transition: opacity 1s ease-in-out;
+}
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width:100%; height: 100%
+    background: rgba(0,0,0,0.45);
+    z-index:-1;
+  }
+
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -5,12 +26,13 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 header {
   background-color: #B57281;
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -21,6 +43,22 @@ header h1 {
 h2{
   margin-bttom: 20px;
   text-alignment:center;
+}
+
+.hero h2, .hero p {
+  color: #333;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+section p, section ul li {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .container {
@@ -82,12 +120,13 @@ footer {
   background-color: #915F6D;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
   display: block;
+  background: rgba(0,0,0,0.5);
 }
 
 p {
