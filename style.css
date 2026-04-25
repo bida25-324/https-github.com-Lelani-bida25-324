@@ -347,6 +347,105 @@ select {
   margin-bottom: 1.25rem;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--rose-400);
+  box-shadow: 0 0 0 3px rgba(251, 111, 146, 0.15);
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height:120px;
+}
+
+/*Submit button*/
+form button[type="submit"],
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--rose-500), var(--rose-700));
+  color: #fff;
+  width: 100%;
+  padding: 14px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 16px rgba(200,48,78,0.35);
+}
+
+form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200,48,78,0.35);
+}
+
+/*-List-*/
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  color: var(--muted);
+}
+ul li {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--rose-400);
+  font-size: 0.65rem;
+  top: 10px;
+}
+
+/*-Sections-*/
+main.container {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/*-Divider-*/
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--rose-200), trnasparent);
+  margin: 2rem 0;
+}
+
+/*-Badges/Pills-*/
+.badge-rose {
+  display: var(--rose-100);
+  background: var(--rose-100);
+  color: var(--rose-700);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-trnasform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+}
+
+/*-Discount / Promo banner-*/
+.promo-banner {
+  background: linear-gradient(135deg, var(--rose-500), var(--rose-700));
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.5 var(--shadow-sm);
+}
+
+/*-Footer-*/
+
+  
+
 
   
                                                         
