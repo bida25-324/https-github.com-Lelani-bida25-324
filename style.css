@@ -198,7 +198,157 @@ button.btn-primary:hover,
 }
 
 /*-Cards-*/
+.card {
+  background: #fff;
+  border: 1px solid var(--rose-100) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow:hidden;
+}
 
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--rose-700);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/*-Images-*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Slider image*/
+#slider,
+#bg-slider {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+/*Content images*/
+section img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin: 1rem 0 1.5rem;
+}
+
+/*-Tables*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem 0;
+}
+
+thead {
+  background: linear-gradient(135deg, var(--rose-700), var(--rose-500));
+}
+
+thaed th {
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--rose-50);
+  transition: background 0.15s;
+}
+
+tbody tr:last-child { border-bottm: none; }
+
+tbody tr:hover {
+  background-color: var(--rose-50);
+}
+
+tbody td {
+  padding: 14px 18px;
+  color: var(--muted);
+  vertical-align: middle
+}
+
+tbody td:first-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--rose-800);
+}
+
+/*"Add to Cart"/ action buttons in tables */
+tbody td button,
+tbody td .btn {
+  background: linear-gradient(135dege, var(--rose-400), var(--rose-600));
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 0.75rem;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(200,48,78,0.25);
+}
+
+tbody td button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(200,48,78,0.35);
+}
+
+/*-Forms-*/
+form, .contact-form {
+  background: #fff; 
+  border: 1px solid var(--rose-100);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rose-700);
+  margin-bottm: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"]
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  background: var(--charcoal);
+  background: var(--warm-white);
+  border: 1.5px solid var(--radius-sm0;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 1.25rem;
+}
+
+
+  
                                                         
 
                               
