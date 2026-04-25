@@ -111,6 +111,98 @@ header h1 {
   letter-spacing: 0.02em;
 }
 
+.navbar-link {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85) !important;
+  padding: 16px 14px !important;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff !important;
+  border-bottom: 3px solid var(--rose-300);
+}
+
+/*Hero Section*/
+.hero {
+  background: linear-gradiemt(135deg, var(--rose-50) 0%, var(--blush) 60%, var(--rose-100) 100%);
+  padding: 64px 32px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  postion: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, var(--rose-200) 0%, transparent 70%);
+  opacity: 0..5;
+  border-radius: 50%;
+}
+ italic
+.hero h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--rose-800);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--rose-600);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+/*-Buttons-*/
+button,
+.btn,
+input[type="submit"] {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px, 28px;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+/*Primary button*/
+.hero button,
+button.btn-primary,
+.btn-rose {
+  background: linear-gradient(135deg, var(--rose-500), var(--rose-700));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(200, 48, 78, 0.3);
+}
+
+.hero button: hover,
+button.btn-primary:hover,
+.btn-rose:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 48, 78, 0.4);
+  background: linear-gradient(135deg, var(--rose-600), var(--rose-800));
+}
+
+/*-Cards-*/
+
+                                                        
+
+                              
+  
 
 
   
