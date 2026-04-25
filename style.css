@@ -54,7 +54,7 @@ body {
   background-color: var(--warm-white);
 }
 
-/*Typograghy*/
+/*-Typograghy-*/
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -76,9 +76,9 @@ a {
   text-decoration: none;
   transition: color 0.2s;
 }
-a:hover { color: var(--rose-500); }
+a:hover { color: var(--rose-700); }
 
-/*Header*/
+/*-Header-*/
 header {
   background: linear-gradient(135deg, var(--rose-800) 0%, var(--rose-600) 100%);
   padding: 18px 0 0;
@@ -92,6 +92,7 @@ header h1 {
   padding: 0 20px 12px;
   letter-spacing: 0.02em;
   font-style: italic;
+  font-weight: 600;
   opacity: 0.92;
 }
 
@@ -145,10 +146,10 @@ header h1 {
   top: -60px; right: -60px;
   width: 260px; height: 260px;
   background: radial-gradient(circle, var(--rose-200) 0%, transparent 70%);
-  opacity: 0..5;
+  opacity: 0.5;
   border-radius: 50%;
 }
- italic
+ 
 .hero h2 {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   color: var(--rose-800);
