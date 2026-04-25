@@ -19,7 +19,7 @@
         }
 
         @keyframes fadeUp {
-            from { opacity: 0; trnasform: translateY(24px); }
+            from { opacity: 0; transform: translateY(24px); }
             to {opacity: 1; transform: translate(0); }
         }
         @keyframes fadeIn {
@@ -45,7 +45,7 @@
             height: calc(100% + 48px);
             object-fit: cover;
             filter: blur(10px);
-            transfrom: scale(1.04);
+            transform: scale(1.04);
             transition: opacity 1.2s ease;
             z-index: 0;
         }
@@ -69,18 +69,18 @@
             text-align: center;
             padding: 40px 24px;
             max-width: 720px;
-            animation: faeUp 0.9s ease both;
+            animation: fadeUp 0.9s ease both;
         }
 
         .hero-eyebrow {
             font-family: 'Lato', sans-serif;
             font-weight: 700;
             font-size: 0.75rem;
-            letter-spacing: 0,22em;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
             color: #ffb3c6;
-            margin-bottom: 18px
-                display: flex;
+            margin-bottom: 18px;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
@@ -128,7 +128,7 @@
                 font-weight: 700;
                 font-size: 0.82rem;
                 letter-spacing: 0.1em;
-                text-trnasform: uppercase;
+                text-transform: uppercase;
                 padding: 15px 34px;
                 border-radius: 50px;
                 border: none;
@@ -180,7 +180,7 @@
             .dot {
                 width: 8px; height 8px;
                 border-radius: 50%;
-                backgorund: rgba(255,255,255,0.4);
+                background: rgba(255,255,255,0.4);
                 transition: background 0.3s, transform 0.3s;
             }
             .dot.active {
@@ -189,7 +189,7 @@
             }
 
             .stats-bar {
-                backgorund: linear-gradient(135deg, #821830, #c9304e);
+                background: linear-gradient(135deg, #821830, #c9304e);
                 padding: 20px 0;
             }
             .stats-inner {
@@ -211,10 +211,10 @@
             }
             .stat-item:not(last-child)::after {
                 content: '';
-                postion: absolute;
-                right: 0; top:20%; bottom: 20%;
-                width 1px;
-                background:/ rgba(255,255,255,0.25);
+                position: absolute;
+                right: 0; top: 20%; bottom: 20%;
+                width: 1px;
+                background: rgba(255,255,255,0.25);
             }
             .stat-num {
                 font-family: 'Playfair Display', Georgia, serif;
@@ -273,7 +273,7 @@
 
             .about-layout {
                 display: grid;
-                grid-template-coloumns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 64px;
                 align-items: center;
             }
@@ -287,10 +287,10 @@
             .about-img-wrap img {
                 width: 100%; height: 420px;
                 object-fit: cover;
-                display: block
+                display: block;
             }
             .about-img-badge {
-                postion: absolute;
+                position: absolute;
                 bottom: 20px; left: 20px;
                 background: rgba(255,255,255,0.95);
                 border-radius: 16px;
@@ -299,7 +299,7 @@
                 backdrop-filter: blur(8px);
             }
             .about-img-badge .num {
-                font-family: 'Playfair Display', Georgia, serif, serif;
+                font-family: 'Playfair Display', Georgia, serif;
                 font-weight:700;
                 font-size: 1.6rem;
                 color: #c9304e;
@@ -348,7 +348,7 @@
 
             .service-preview-card {
                 background: #fff;
-                border-radius: 1px solid #ffe0e8;
+                border: 1px solid #ffe0e8;
                 border-radius: 20px;
                 padding: 28px 22px;
                 text-align: center;
