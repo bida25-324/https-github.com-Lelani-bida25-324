@@ -35,4 +35,82 @@
 
 /*-Reset & Base-*/
 
+ *,*::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+html {
+  scroll-behaviour: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--charcoal);
+  background-color: var(--warm-white);
+}
+
+/*Typograghy*/
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 0.75rem; }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin-bottom: 0.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rose-500); }
+
+p { color: var(--muted); margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--rose-500);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--rose-500); }
+
+/*Header*/
+header {
+  background: linear-gradient(135deg, var(--rose-800) 0%, var(--rose-600) 100%);
+  padding: 18px 0 0;
+  box-shadow: 0 4px 20px rgba(90, 20, 40, 0.25);
+}
+
+header h1 {
+  color: #fff;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  text-align: center;
+  padding: 0 20px 12px;
+  letter-spacing: 0.02em;
+  font-style: italic;
+  opacity: 0.92;
+}
+
+/*-Navbar (Bootstrap override)-*/
+.navbar {
+  background: rgba(90, 20, 40, 0.5) !important;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff !important;
+  letter-spacing: 0.02em;
+}
+
+
+
   
