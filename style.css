@@ -358,7 +358,7 @@ select:focus {
 
 textarea {
   resize: vertical;
-  min-height:120px;
+  min-height: 120px;
 }
 
 /*Submit button*/
@@ -506,7 +506,7 @@ footer { color: rgba(255,255,255,0.75); margin: 0; }
   .hero { padding: 40px 20px; }
   .hero h2 { font-size: 1.6rem; }
 
-  table { font-size: 1.6rem; }
+  table { font-size: 0.85rem; }
   thead th, tbody td { padding: 10px 12px; }
 
   #slider, #bg-slider { max-height: 240px; }
