@@ -443,7 +443,88 @@ hr {
 }
 
 /*-Footer-*/
+background: linear-gradient(135deg, var(--rose-900) 0%, var(--rose-800) 100%);
+color: rgba(255,255,255,0.75);
+text-align: center;
+padding: 28px 20px;
+font-size: 0.88rem;
+font-family: var(--font-body);
+letter-spacing: 0.04em;
+margin-top: 3rem;
+}
 
+footer { color: rgba(255,255,255,0.75); margin: 0; }
+
+/*-Price Styling-*/
+.price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--rose-600);
+  font-size: 1.15rem;
+}
+
+/*-Section Headings with decorative line-*/
+.section-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  backgorund: linear-gradient(to right, var(--rose-400), var(--rose-200));
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/*-Working Hours/ Info Boxes-*/
+.info-card {
+  background: linear-gradient(135deg, var(--rose-50), var(--blush));
+  border: 1px solid var(--rose-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.info-card h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--rose-700);
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/*-Mobile/Responsive-*/
+@media(max-width: 768px) {
+  header h1 { font-size: 1.1rem; padding-bottom: 8px; }
+  
+  .hero { padding: 40px 20px; }
+  .hero h2 { font-size: 1.6rem; }
+
+  table { font-size: 1.6rem; }
+  thead th, tbody td { padding: 10px 12px; }
+
+  #slider, #bg-slider { max-height: 240px; }
+
+  .card-body { padding: 1rem; }
+  form, .contact-form { padding: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  h2 { font-size: 1.4rem; }
+
+  .nav-link { padding: 12px 10px !important; font: 0.72rem; }
+
+  tbody td button { padding: 6px 12px; font-size: 0.7rem; }
+
+  table { display: block; overflow-x: auto; }
+}
+  
+                            
   
 
 
