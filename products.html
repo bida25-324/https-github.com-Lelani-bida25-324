@@ -137,78 +137,214 @@
         transform: scale(1.06);
     }
     .product-badge {
-    
-    
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(255,255,255,0.92);
+        color: #c9304e;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 50px;
+        border: 1px solid #ffc2d1;
+    }
+
+    .product-info {
+        padding: 20px 22px 22px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .product-name {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: #821830;
+        margin-bottom: 6px;
+        line-height: 1.25;
+    }
+    .product-desc {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.88rem;
+        color: #7a5c5c;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        flex: 1;
+    }
+    .product-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .product-price {
+        font-family; 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #c9304e;
+    }
+    .product-price span {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #c8a4a4;
+        margin-right: 2px;
+    }
+
+    .btn-cart {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(135deg, #fb6f92, #c9304e);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(200,48,78,0.22);
+        transition: all 0.22s ease;
+        white-space: nowrap;
+    }
+    .btn-cart-hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 20px rgba(200,48,78,0.35);
+        background: linear-gradient(135deg, #e8516d, #a61e3a);
+    }
+    .btn-cart.added {
+        background: linear-gradient(135deg, #3B6D11, #27500A);
+        box-shadow: 0 4px 14px rgba(59,109,17,0.25);
+    }
+
+    .cart-toast {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 14px 22px;
+        box-shadow: 0 8px 32px rgba(168,50,80,0.18);
+        font-family: 'Lato', sans-serif;
+        font-size: 0.9rem;
+        color: #821830;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transform: translateY(80px);
+        opacity: 0;
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 9999;
+    }
+    .cart-toats.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .payment-note {
+        background: linear-gradient(135deg, #fff0f3, #ffedf0);
+        border: 1px solid #ffc2d1;
+        border-left: 4px solid #e8516d;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 2rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.9rem;
+        color: #7a5c5c;
+    }
+    .payment-note strong {
+        color: #821830;
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.82rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+    .cart-bar {
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(135deg, #821830, #c9304e);
+        color: #fff;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        bow-shadow: 0 -4px 20px rgba(130, 24,48,0.25);
+        z-index: 100;
+        transform: translateY(100%);
+        transform: transform 0.35s ease;
+    }
+    .cart-bar-text {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1rem;
+        font-style italic;
+    }
+    .cart-bar-total {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    .btn-checkout {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        border-radius: 50px;
+        border: 2px solid rgba(255,255,255,0.7);
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .btn-checkout:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    @media (max-width: 576px) {
+        .products-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+        .product-img-wrap { height: 160px; }
+        .product-info { padding: 14px 14px 16px; }
+        .product-name { font-size: 1rem; }
+        .product-prie { font-size: 1.1rem; }
+        .btn-cart { padding: 8px 14px; font-size: 0.7rem}
+    }
+    @media (max-width: 400px) {
+        .products-grid { grid-template-columns: 1fr; }
+    }
 </style>
 </head>
   
 <body>
         
        <header>
-
-            <h1>Our Products</h1>
-
+            <h1>Lelani`s Beauty Boutique</h1>
              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            
             <div class="container">
-                
                 <a class="navbar-brand" href="index.html">Lelani`s Beauty Boutique</a>
-                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    
                     <span class="navbar-toggler-icon"></span>
-                    
                 </button>
-                  
-                <div class="navbar-collapse" id="navbarNav">
-                    
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
-                            
-                            <a class="nav-link" href="index.html">Home</a>
-                            
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="products.html">Products</a>
-                                
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="services.html">Services</a>
-
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="cart.html">Your Cart</a>
-                        
-                        </li>
-                        
-
-                       <li class="nav-item">
-                            
-                            <a class="nav-link" href="about.html">About</a>
-
-                        </li>
-                        
-                        <li class="nav-item">
-                            
-                            <a class="nav-link" href="contact.html">Contact</a>
-                            
-                        </li>
-                        
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html">Your Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    
                 </div>
-                
             </div>
-            
-        </nav>
-            
+        </nav>   
   </header>
 
   <main>
@@ -219,16 +355,7 @@
                 
                 <div class="col-md-8">
 
-<table border="1">
-
-<tr>
-  <th>Product</th>
-  <th>Category</th>
-  <th>Description</th>
-  <th>Price (Pula)</th>
-  <th>Action</th>
-</tr>
-
+                    
   <tr>
     <div class="product-img">
     <td><img src="https://malak.com.pk/cdn/shop/files/6291106032963.jpg?v=1755497084&width=800" class="product-img" alt="Lipstick"></td>
