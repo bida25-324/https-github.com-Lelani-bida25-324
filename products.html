@@ -51,8 +51,49 @@
     color: rgba(255,255,255,0.82);
     font-size: 1.05rem;
     max-width: 500px;
+    margin: 0 auto 0;
     position: relative;
   }
+
+    .filter-bar {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 28px 16px 12px;
+    }
+    .filter-pill {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        padding: 8px 20px;
+        border-radius: 50px;
+        border: 1.5px solid #ffc2d1;
+        background: #fff;
+        color: pointer;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .filter-pill:hover,
+    .filter-pill.active {
+        background: linear-gradient(135deg, #e8516d, #c9304e);
+        color: #fff;
+        border-color: transparent;
+        box-shadow: 0 4px 14px rgba(200,48,78,0.28);
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 28px;
+        padding: 20px 0 48px;
+    }
+
+    .product-card {
+        background: #fff;
+        border:
     
 </style>
 </head>
