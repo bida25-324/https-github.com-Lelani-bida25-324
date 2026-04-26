@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UFT-8"
+    <meta charset="UFT-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Our Products - Lelani`s Beauty Boutique</title>
 
@@ -36,7 +36,7 @@
     bottom: -60px; left: -60px;
     width: 220px; height: 220px;
     background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
-    border-radius: 50;
+    border-radius: 50%;
   }
   .products-hero h2 {
     font-family: 'Playfair Display', Georgia, serif;
@@ -72,7 +72,7 @@
         border-radius: 50px;
         border: 1.5px solid #ffc2d1;
         background: #fff;
-        color: pointer;
+        color: #c9304e;
         cursor: pointer;
         transition: all 0.2s;
     }
@@ -97,7 +97,7 @@
         overflow: hidden;
         border: 1px solid #ffe0e8;
         box-shadow: 0 4px 16px rgba(168,50,80,0.07);
-        transistion: transform 0.28s ease, box-shadow 0.28s ease;
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
         display: flex;
         flex-direction: column;
         animation: fadeUp 0.5s ease both;
@@ -107,7 +107,7 @@
         box-shadow: 0 16px 40px rgba(168,50,80,0.15);
     }
 
-    .product-card:nth-child(1) { animation-delay: 0.15s; }
+    .product-card:nth-child(1) { animation-delay: 0.05s; }
     .product-card:nth-child(2) { animation-delay: 0.10s; }
     .product-card:nth-child(3) { animation-delay: 0.15s; }
     .product-card:nth-child(4) { animation-delay: 0.20s; }
@@ -116,7 +116,7 @@
 
     @keyframes fadeUp {
         from { opacity: 0; transform: translateY(22px); }
-        to { opacity: 1; transition: translateY(0); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     .product-img-wrap {
@@ -181,7 +181,7 @@
         gap: 12px;
     }
     .product-price {
-        font-family; 'Playfair Display', Georgia, serif;
+        font-family: 'Playfair Display', Georgia, serif;
         font-weight: 700;
         font-size: 1.35rem;
         color: #c9304e;
@@ -211,7 +211,7 @@
         transition: all 0.22s ease;
         white-space: nowrap;
     }
-    .btn-cart-hover {
+    .btn-cart:hover {
         transform: translateY(-2px);
         box-shadow: 0 7px 20px rgba(200,48,78,0.35);
         background: linear-gradient(135deg, #e8516d, #a61e3a);
@@ -241,7 +241,7 @@
         transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         z-index: 9999;
     }
-    .cart-toats.show {
+    .cart-toast.show {
         transform: translateY(0);
         opacity: 1;
     }
@@ -276,15 +276,15 @@
         align-items: center;
         justify-content: space-between;
         gap: 16px;
-        bow-shadow: 0 -4px 20px rgba(130, 24,48,0.25);
+        box-shadow: 0 -4px 20px rgba(130, 24,48,0.25);
         z-index: 100;
         transform: translateY(100%);
-        transform: transform 0.35s ease;
+        transition: transform 0.35s ease;
     }
     .cart-bar-text {
         font-family: 'Playfair Display', Georgia, serif;
         font-size: 1rem;
-        font-style italic;
+        font-style: italic;
     }
     .cart-bar-total {
         font-family: 'Playfair Display', Georgia, serif;
@@ -314,7 +314,7 @@
         .product-img-wrap { height: 160px; }
         .product-info { padding: 14px 14px 16px; }
         .product-name { font-size: 1rem; }
-        .product-prie { font-size: 1.1rem; }
+        .product-price { font-size: 1.1rem; }
         .btn-cart { padding: 8px 14px; font-size: 0.7rem}
     }
     @media (max-width: 400px) {
@@ -403,7 +403,7 @@
                     <span class="product-badge">Makeup</span>
                 </div>
                 <div class="product-info">
-                    <div class="product-name">Eyeshadow Palette</div>
+                    <div class="product-name">Foundation</div>
                     <div class="product-desc">Full-coverage liquid foundation for a flawless, natural finish, natural finish all day long.</div>
                     <div class="product-footer">
                         <div class="product-price"><span>P</span>220</div>
@@ -494,7 +494,7 @@
             const count = cartItems.length;
             document.getElementById('cartBarText').textContent =
                 count === 1 ? '1 item in your cart' : count + 'items in your cart';
-            document.getElementId('cartBarTotal').textContent = 'P' + cartTotal;
+            document.getElemenBytId('cartBarTotal').textContent = 'P' + cartTotal;
             bar.classList.add('visible');
 
             function showToast(msg) {
@@ -502,12 +502,14 @@
                 document.getElementById('toastMsg').textContent = msg;
                 toast.classList.add('show');
                 clearTimeout(toastTimer);
-                toastTimer = setTimer(() => toast.classList.remove('show'), 2800);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
             }
 
             function filterProducts(category, pill) {
+                document.querySelectorAll('.filter-pill').forEach(p.classList.remove('active'));
+                pill.classList.add('active');
 
-                document.querySelectorAll('.filter-pill').forEach(card => {
+                document.querySelectorAll('.product-card').forEach(card => {
                     const match = category === 'all' || card.dataset.category === category;
                     card.style.display = match ? 'flex' : 'none';
                 });
