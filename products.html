@@ -327,14 +327,14 @@
         
        <header>
             <h1>Lelani`s Beauty Boutique</h1>
-             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+             <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Lelani`s Beauty Boutique</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -384,7 +384,7 @@
 
             <div class="product-card" data-category="makeup">
                 <div class="product-img-wrap">
-                    <img src="https://marscosmetics.in/cdn/shop/products/MG_6125-2_f89c9a23-1d52-438a-85c3-64f2a32a0c59.jpg?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <img src="https://marscosmetics.in/cdn/shop/products/MG_6125-2_f89c9a23-1d52-438a-85c3-64f2a32a0c59.jpg?w=600&auto=format&fit=crop" alt="Eyeshadow" loading="lazy">
                     <span class="product-badge">Makeup</span>
                 </div>
                 <div class="product-info">
@@ -399,12 +399,12 @@
 
              <div class="product-card" data-category="makeup">
                 <div class="product-img-wrap">
-                    <img src="https://static1.squarespace.com/static/62a98ab3228a337fdf58fe76/t/67a36ccf5340cd142a8a5317/1738763471111/Best+Foundations+For+Mature+Skin.jpg?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <img src="https://static1.squarespace.com/static/62a98ab3228a337fdf58fe76/t/67a36ccf5340cd142a8a5317/1738763471111/Best+Foundations+For+Mature+Skin.jpg?w=600&auto=format&fit=crop" alt="Foundation" loading="lazy">
                     <span class="product-badge">Makeup</span>
                 </div>
                 <div class="product-info">
                     <div class="product-name">Foundation</div>
-                    <div class="product-desc">Full-coverage liquid foundation for a flawless, natural finish, natural finish all day long.</div>
+                    <div class="product-desc">Full-coverage liquid foundation for a flawless, natural finish all day long.</div>
                     <div class="product-footer">
                         <div class="product-price"><span>P</span>220</div>
                         <button class="btn-cart" onclick="addToCart(this, 'Foundation', 220)">Add to Cart</button>
@@ -414,7 +414,7 @@
 
             <div class="product-card" data-category="skincare">
                 <div class="product-img-wrap">
-                    <img src="https://shop.healthyoptions.com.ph/cdn/shop/articles/6343202005ad951e47a881ab87e9bbf5_w450_h350_cp.jpg?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <img src="https://shop.healthyoptions.com.ph/cdn/shop/articles/6343202005ad951e47a881ab87e9bbf5_w450_h350_cp.jpg?w=600&auto=format&fit=crop" alt="Moisturizer" loading="lazy">
                     <span class="product-badge">Skin Care</span>
                 </div>
                 <div class="product-info">
@@ -429,7 +429,7 @@
 
              <div class="product-card" data-category="skincare">
                 <div class="product-img-wrap">
-                    <img src="https://media.post.rvohealth.io/wp-content/uploads/2022/02/homemade-beauty-scrub-732-549-feature-thumb-1-732x549.jpg?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <img src="https://media.post.rvohealth.io/wp-content/uploads/2022/02/homemade-beauty-scrub-732-549-feature-thumb-1-732x549.jpg?w=600&auto=format&fit=crop" alt="Face scrub" loading="lazy">
                     <span class="product-badge">Skin Care</span>
                 </div>
                 <div class="product-info">
@@ -444,7 +444,7 @@
 
             <div class="product-card" data-category="skincare">
                 <div class="product-img-wrap">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRZKcV0rG3V33wcVA_xtclJe4J74RxulyTzg3AW8kSQ&s?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRZKcV0rG3V33wcVA_xtclJe4J74RxulyTzg3AW8kSQ&s?w=600&auto=format&fit=crop" alt="MakeUp remover" loading="lazy">
                     <span class="product-badge">Skin Care</span>
                 </div>
                 <div class="product-info">
@@ -497,6 +497,9 @@
             document.getElemenBytId('cartBarTotal').textContent = 'P' + cartTotal;
             bar.classList.add('visible');
 
+            showToast(name + 'added to cart!');
+        }
+
             function showToast(msg) {
                 const toast = document.getElementById('cartToast');
                 document.getElementById('toastMsg').textContent = msg;
@@ -506,7 +509,7 @@
             }
 
             function filterProducts(category, pill) {
-                document.querySelectorAll('.filter-pill').forEach(p.classList.remove('active'));
+                document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
                 pill.classList.add('active');
 
                 document.querySelectorAll('.product-card').forEach(card => {
