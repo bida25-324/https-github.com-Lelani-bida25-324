@@ -347,98 +347,41 @@
         </nav>   
   </header>
 
-  <main>
+<div class="products-hero">
+    <h2>Our Products</h2>
+    <p>Handpicked beauty essentials to help you glow with confidence every day.</p>
+</div>
 
-        <main class="container my-5">
-            
-            <div class="row">
-                
-                <div class="col-md-8">
+    <main class="container" style="max-width: 1100px;">
 
-                    
-  <tr>
-    <div class="product-img">
-    <td><img src="https://malak.com.pk/cdn/shop/files/6291106032963.jpg?v=1755497084&width=800" class="product-img" alt="Lipstick"></td>
-    <td>Lipstick</td>
-    <td>Makeup</td>
-    <td>Long Lastingmatte lipstick</td>
-    <td>P70</td>
-    <td><button onclick="addToCart('lipstick')">Add to Cart</button></td></div>
-  </tr>
+        <div class="filter-bar">
+            <button class="filter-pill active" onclick="filterProducts('all', this)">All Products</button>
+            <button class="filter-pill" onclick="filterProducts('makeup', this)">All Products</button>
+            <button class="filter-pill" onclick="filterProducts('skincare', this)">All Products</button>
+        </div>
 
-  <tr>
-    <div class="product-img">
-    <td><img src="https://marscosmetics.in/cdn/shop/products/MG_6125-2_f89c9a23-1d52-438a-85c3-64f2a32a0c59.jpg?v=1766213523&width=2000" class="product-img" alt="Eyeshadow"></td>
-    <td>Eyeshadow Palette </td>
-    <td>Makeup</td>
-    <td>12 colour professional palette</td>
-    <td>P250</td>
-    <td><button onclick="addToCart('Eyeshadow Palette')">Add to Cart</button></td></div>
-  </tr>
+        <div class="payment-note">
+            <strong>&#128338; Payment Information</strong>
+            Payment is accepted at delivery or collection at the Lelani`s Beauty Boutique station. No online payment required.
+        </div>
 
-  <tr>
-    <div class="product-img">
-    <td><img src="https://static1.squarespace.com/static/62a98ab3228a337fdf58fe76/t/67a36ccf5340cd142a8a5317/1738763471111/Best+Foundations+For+Mature+Skin.jpg?format=1500w" class="product-img" alt="Foundation"></td>
-    <td>Foundation</td>
-    <td>Makeup</td>
-    <td>Full coverage liquid foundation</td>
-    <td>P220</td>
-    <td><button onclick="addToCart('Foundation')">Add to Cart</button></td></div>
-  </tr>
+        <div class="products-grid" id="productGrid">
 
-  <tr>
-    <div class="product-img">
-    <td><img src="https://shop.healthyoptions.com.ph/cdn/shop/articles/6343202005ad951e47a881ab87e9bbf5_w450_h350_cp.jpg?v=1676985737" class="product-img" alt="Moisturizer"></td>
-    <td>Moisturizer</td>
-    <td>Skin care</td>
-    <td>Hydrating daily face moisturizer</td>
-    <td>P180</td>
-    <td><button onclick="addToCart('Moisturizer')">Add to Cart</button></td></div>
-  </tr>
-
-  <tr>
-    <div class="product-img">
-    <td><img src="https://media.post.rvohealth.io/wp-content/uploads/2022/02/homemade-beauty-scrub-732-549-feature-thumb-1-732x549.jpg" class="product-img" alt="Face Scrub"></td>
-    <td>Face Scrub</td>
-    <td>Skin care</td>
-    <td>Gentle exfoliating scrub</td>
-    <td>P180</td>
-    <td><button onclick="addToCart('Face scrub')">Add to Cart</button></td></div>
-  </tr>
-
-  <tr>
-    <div class="product-img">
-    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRZKcV0rG3V33wcVA_xtclJe4J74RxulyTzg3AW8kSQ&s" class="product-img" alt="Makeup remover"></td>
-    <td>Makeup remover</td>
-    <td>Skin care</td>
-    <td>Hydrating cleanser</td>
-    <td>P100</td>
-    <td><button onclick="addToCart('Makeup remover')">Add to Cart</button></td></div>
-  </tr>
-
-  <script>
-
-    function addToCart(product){
-      alert(product + "has been added to your cart!");
-    }
-    
-  </script>
-
-  </table>
-                   <p>NB: Payment is only done at delivery or collection at the Lelani`s Beauty Boutique Station.</p>
-                  
+            <div class="product-card" data-category="makeup">
+                <div class="product-img-wrap">
+                    <img src="https://becutecosmetics.pk/wp-content/uploads/2024/02/Becute-Cosmetics-Velvet-Sensation-Lipstick-V-235-Rs300.jpg?w=600&auto=format&fit=crop" alt="Long Lasting Matte Lipstick" loading="lazy">
+                    <span class="product-badge">Makeup</span>
                 </div>
-              
+                <div class="product-info">
+                    <div class="product-name">Matte Lipstick</div>
+                    <div class="product-desc">Long-lasting matte formula that keeps your lips bold and beautiful all day.</div>
+                    <div class="product-footer">
+                        <div class="product-price"><span>P</span>70</div>
+                        <button class="btn-cart" onclick="addToCart(this, 'Matte Lipstick', 70)">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-          
-        </main>
-  </main>
-                  
-   <footer>
             
-            <p>&copy;2026 Lelani`s Beauty Boutique</p>
-            
-        </footer>
 
     <!-- Bootstrap JS and dependencies -->
 
