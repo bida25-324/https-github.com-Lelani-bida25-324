@@ -49,6 +49,200 @@
       }
       .service-hero p {
         color: rgba(255,255,255,0.82);
+        font-size: 1.05rem;
+        max-width: 500px;
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        position: relative;
+      }
+
+      .section-label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #e8516d;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .section-label::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, #ffc2d1, transparent);
+      }
+      .section-heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size clamp(1.6rem, 3.5vw, 2.2rem);
+        color: #821830;
+        margin-bottom: 8px;
+      }
+      .section-sub {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.95rem;
+        color: #c8a4a4;
+        margin-bottom: 36px;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+        margin-bottom: 64px;
+      }
+
+      .service-card {
+        background: #fff;
+        border: 1px solid #fffe0e8;
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(168,50,80,0.07);
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
+        display: flex;
+        flex-direction: column;
+        animation: fadeUp 0.5s ease both;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(168,50,80,0.14);
+      }
+      .service-card:nth-child(1) { animation-delay: 0.05s; }
+      .service-card:nth-child(2) { animation-delay: 0.11s; }
+      .service-card:nth-child(3) { animation-delay: 0.17s; }
+      .service-card:nth-child(4) { animation-delay: 0.23s; }
+      .service-card:nth-child(5) { animation-delay: 0.29s; }
+
+      ,service-img-wrap {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        background: #fff0f3;
+      }
+      .service-img-img {
+        width: 100% height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+      .service-card:hover .service-img-wrap {
+        transform: scale(1.07);
+      }
+
+      .service-cat {
+        position: absolute;
+        top: 14px; left: 14px;
+        background: rgba(255,255,255,0.92);
+        color: #c9304e;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size-size: 0.67rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 50px;
+        backdrop-filter: blur(4px);
+        border: 1px solid #ffc2d1;
+      }
+      
+      .service-popular {
+        position: absolute;
+        top: 14px; right: 14px;
+        background; linear-gradient(135deg, #fb6f92, #c9304e);
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 50px;
+      }
+
+      .service-body {
+        padding: 22px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .service-name {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #821830;
+        margin-bottom: 8px;
+      }
+      .service-desc {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.88rem;
+        color: #7a5c5c;
+        line-height: 1.65;
+        margin-bottom: 20px;
+        flex; 1;
+      }
+      .service-footer {
+        display; flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .service-price {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: 1.45rem;
+        color: #c9304e;
+      }
+      .service-price span {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #c8a4a4;
+        margin-right: 2px;
+      }
+
+      .btn-book {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(135deg, #fb6f92, #c9304e);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(200,48,78,0.22);
+        transition: all 0.22s ease;
+        white-space: nowrap;
+      }
+      .btn-book:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(200,48,78,0.34;
+        background: linear-gradient(135deg, #e516d, #a61e3a);
+      }
+
+      .booking-section {
+        background: #fff;
+        border: 1px solid #ffe0e8;
+        border-radius: 28px;
+        padding: 48px 52px;
+        box-shadow: 0 8px 32px rgba(168,50,80,0.09);
+        margin-bottom: 64px;
+        animation: fadeUp 0.5s ease 0.3s both;
+      }
+      
+        
+        
+        
+        
     </style>
     
   </head>
