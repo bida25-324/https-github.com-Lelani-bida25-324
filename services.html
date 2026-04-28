@@ -238,7 +238,110 @@
         margin-bottom: 64px;
         animation: fadeUp 0.5s ease 0.3s both;
       }
+
+      .booking-layout {
+        display: grid;
+        grid-template-column: 1fr 1.5fr;
+        gap: 52px;
+        align-items: start;
+      }
+
+      .booking-intro h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size:1.7rem;
+        color: #821830;
+        margin-bottom: 12px;
+        line-height: 1.2;
+      }
+      .booking-intro p {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.92rem;
+        color: #7a5c5c;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+
+      .expect-list {
+        list-style: none;
+        padding: 0; margin: 0;
+      }
+      .expect-list li {
+        font-size: 0.88rem;
+        color: #7a5c5c;
+        padding: 9px 0 9px 32px;
+        position: relative;
+        border-bottom: 1px solid #fff0f3;
+      }
+      .expect-list li:last-child { border-bottom: none; }
+      .expect-list li::before {
+        content:'✦';
+        position: relative;
+        left: 0;
+        color: #fb6f92;
+        font-size: 0.65rem;
+        top: 12px;
+      }
+      .expect-list li strong { color: #821830 }
+
+      .form-row-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .field-group { margin-bottom: 16px; }
+      .field-group label {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.74rem;
+        letter-spacing: 0.09em;
+        color: #c9304e;
+        margin-bottom: 7px;
+      }
+      .field-group input,
+      .field-group select,
+      .field-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        font-family:'Lato', sans-serif;
+        color: #3a2a2a;
+        background: #fff8f9;
+        border: 1.5px solid #ffc2d1;
+        border-radius: 10px;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        appearance: none;
+      }
+      .field-group input:focus,
+      .field-group select:focus,
+      .field-group textarea:focus {
+        border-color: #e8516d;
+        box-shadow: 0 0 0 3px rgba(232,81,109,0.13);
+        background:#fff;
+      }
+      .field-group textarea{ resize: vertical; min-height: 100px; }
+
+      .btn-submit {
+        width: 100%;
+        padding: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        background: linear-gradient(135deg, #fb6f92, #c9304e);
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(135deg, #fb6f92, #c9304e);
+        transition; all 0.25s ease;
+        margin-top: 8px;
+      }
+      .btn-
       
+        
         
         
         
