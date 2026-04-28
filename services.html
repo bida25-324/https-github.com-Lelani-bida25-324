@@ -339,172 +339,324 @@
         transition; all 0.25s ease;
         margin-top: 8px;
       }
-      .btn-
-      
-        
-        
-        
-        
-        
+      .btn-submit:hover {
+        transfrom: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(200,48,78,0.38);
+        background: linear-gradient(135deg.#e8516d, #a61e3a);
+      }
+
+      .booking-success {
+        display: none;
+        text-align: center;
+        padding: 28px 16px;
+      }
+      .booking-success .tick {
+        width: 64px; height: 64px;
+        background: linear-gradient(135deg, #eaf3de, #c0dd97);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.8rem;
+        margin: 0 auto 16px;
+      }
+      .booking-success h4 {
+        font-family:'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        color: #3B6D11;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+      .booking-succcess p {
+        font-family:'Lato', sans-serif;
+        font-size: 0.9rem;
+        color: #7a5c5c;
+      }
+
+      @media (max-width: 900px) {
+        .booking-section { padding: 32px 28px; }
+        .booking-layout { grid-template-columns: 1fr; gap: 32px; }
+      }
+      @media (max-width: 600px) {
+        .services-grid { grid-template-columns: 1fr; }
+        .form-row-two { grid-template-columns: 1fr; gap: 0; }
+        .booking-section { padding: 24px 18px; border-radius: 18px; }
+      } 
     </style>
-    
   </head>
-  
   <body>
     
 <header>
 
-            <h1>Our Beauty Services</h1>
-
+            <h1>Lelani`s Beauty Boutique</h1>
              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            
             <div class="container">
-                
                 <a class="navbar-brand" href="index.html">Lelani`s Beauty Boutique</a>
-                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    
                     <span class="navbar-toggler-icon"></span>
-                    
                 </button>
-                
                 <div class="navbar-collapse" id="navbarNav">
-                    
                     <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
-                            
-                            <a class="nav-link" href="index.html">Home</a>
-                            
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="products.html">Products</a>
-                                
-                        </li>
-
-                        <li class="nav-item">
-
-                            <a class="nav-link" href="services.html">Services</a>
-
-                        </li>
-
-                      <li class="nav-item">
-
-                            <a class="nav-link" href="cart.html">Your Cart</a>
-                        
-                        </li>
-                        
-                       <li class="nav-item">
-                            
-                            <a class="nav-link" href="about.html">About</a>
-
-                        </li>
-                        
-                        <li class="nav-item">
-                            
-                            <a class="nav-link" href="contact.html">Contact</a>
-                            
-                        </li>
-                        
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html">Your Cart</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    
                 </div>
-                
             </div>
-            
-        </nav>
-            
+        </nav> 
         </header>
 
-        <main>
+        <div class="service-hero">
+          <h2>Our Beauty Services</h2>
+          <p>Professional treatment and makeup artistry - tailored to make you feel your most beautiful.</p>
+        </div>
 
-          <main class="container my-5">
+        <main class="container" style="max-width: 1080px; padding-top: 52px;">
 
-            <div class="row">
+          <div class="section-label">What we offer</div>
+          <h2 class="section-heading">Vhoose Your Treatment</h2>
+          <p class="section-sub">All services performed by a trained beauty professional. Walk-ins welcome during hours.</p>
 
-              <div class="col-md-8">
+          <div class="service-grid">
+          
+          <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="https://www.bubblesindia.com/blog/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg?w=600&auto=format&fit=crop" alt="Face Scrubbing" loading="lazy">
+              <span class="service-cat">Skin Care</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Face Scrubbing</div>
+              <div class="service-desc">A deep cleansing exfoliation treatment that removes dead skin cells, unclogs pores, and leaves your skin feeling smooth, fresh, and radiant.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>200</div>
+              <button class="btn-book" onclick="prefillBooking('Face Scrubbing')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-<table border="1">
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="data:image/jpeg;base64,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?w=600&auto=format&fit=crop" alt="Face Steaming" loading="lazy">
+              <span class="service-cat">Skin Care</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Face Scrubbing</div>
+              <div class="service-desc">A relaxing skin detox steaming treatment that opens pores, hydrates the skin, and deeply cleanse to give you a healthy, glowing complextion.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>180</div>
+              <button class="btn-book" onclick="prefillBooking('Face Steaming')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-  <tr>
-  <th>Services</th>
-  <th>Description</th>
-  <th>Price(Pula)</th>
-  </tr>
+          
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="data:image/jpeg;base64,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?w=600&auto=format&fit=crop" alt="Face Steaming" loading="lazy">
+              <span class="service-cat">Skin Care</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Face steaming</div>
+              <div class="service-desc">A relaxing skin detox steaming treatment that opens pores, hydrates the skin, and deeply cleanse to give you a healthy, glowing complextion.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>180</div>
+              <button class="btn-book" onclick="prefillBooking('Face Steaming')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-  <tr>
-    <td><img src="https://www.bubblesindia.com/blog/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg" class="service-img" alt="Face Scrubbing"></td>
-    <td>Face Scrubbing</td>
-    <td>Deep cleansing exfoliation treatment</td>
-    <td>P200</td>
-  </tr>
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="https://i.pinimg.com/736x/ba/96/15/ba96156fcc56598cb3fc760fd6aaa07a.jpg?w=600&auto=format&fit=crop" alt="Natural Makeup Glow" loading="lazy">
+              <span class="service-cat">Skin Care</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Natural Glam Makeup</div>
+              <div class="service-desc">A soft, everyday makeup look that enhances your natural beauty - perfect for work, casual outings, or daytime events. Fresh and effortlessly glam.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>350</div>
+              <button class="btn-book" onclick="prefillBooking('Face Steaming')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-  <tr>
-    <td><img src="data:image/jpeg;base64,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" class="service-img" alt="Face steaming"></td>
-    <td>Face steaming</td>
-    <td>Skin detox steaming treatment</td>
-    <td>P180</td>
-  </tr>
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="https://i.pinimg.com/736x/b3/c1/62/b3c1627e5bf8b5b797cd378bc260fa3d.jpg?w=600&auto=format&fit=crop" alt="Full Glam Makeup" loading="lazy">
+              <span class="service-cat">Makeup</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Full Glam Makeup</div>
+              <div class="service-desc">A bold, full-coverage look designed for events, graduations, parties, or any occasion you want to turn heads and feel unforgettable.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>450</div>
+              <button class="btn-book" onclick="prefillBooking('Full Glam Makeup')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-  <tr>
-    <td><img src="https://i.pinimg.com/736x/ba/96/15/ba96156fcc56598cb3fc760fd6aaa07a.jpg" class="servive-img" alt="Natural Glam Makeup"></td>
-    <td>Natural Glam Makeup</td>
-    <td>Soft everyday makeup look</td>
-    <td>P350</td>
-  </tr>
+          
+           <div class="service-card">
+            <div class="service-img-wrap">
+              <img src="https://i.pinimg.com/1200x/a7/ad/58/a7ad584e5221fb520e5a01b0b2277c75.jpg?w=600&auto=format&fit=crop" alt="Wedding Makeup Glam" loading="lazy">
+              <span class="service-cat">Bridal</span>
+              <span class="service-popular">✦ Premium</span>
+            </div>
+            <div class="service-body">
+              <div class="service-name">Wedding Glam Makeup</div>
+              <div class="service-desc">Professional bridalmakeup crafted to last all day, look stunning in photos, and make you feel like the most beautiful version of yourself on your special day.</div>
+              <div class="service-footer">
+              <div class="service-price"><span>P</span>700</div>
+              <button class="btn-book" onclick="prefillBooking('Wedding Glam Makeup')">Book Now</button>
+            </div>
+          </div>
+          </div>
 
-  <tr>
-    <td><img src="https://i.pinimg.com/736x/b3/c1/62/b3c1627e5bf8b5b797cd378bc260fa3d.jpg" class="service-img" alt="Full Glam Makeup"></td>
-    <td>Full Glam Makeup</td>
-    <td>Full Glam Makeup for events</td>
-    <td>P450</td>
-  </tr>
+           </div>
 
-  <tr>
-    <td><img src="https://i.pinimg.com/1200x/a7/ad/58/a7ad584e5221fb520e5a01b0b2277c75.jpg" class="service-img" alt="Wedding Glam Makeup"></td>
-    <td>Wedding Makeup</td>
-    <td>Professional bridal makeup</td>
-    <td>P700</td>
-  </tr>
+            <div class="section-label">Ready to treat yourself?</div>
+            <h2 class="section-heading">Book an Appointment</h2>
+            <p class="section-sub">Fill in the form below and we'll confirm via phone or Whatsapp within 24 hours.</p>
 
-  </table>
+            <div class="booking-section" id="bookingSection">
+              <div class="booking-layout">
 
-     <form action="lelanisbeautyboutique@gmail.com" method="post" enctype="text/plain">
+                <div class="booking-intro">
+                  <h3>What to Expect</h3>
+                  <p>We want every visit to feel special. Here's everything you need to know before you book.</p>
+                  <ul class="expect-list">
+                    <li><strong>Flexible scheduling</strong> - Mon to Sun, from 08:00</li>
+                    <li><strong>Confirmation</strong> - we'll call or Whatsapp to confirm your slot</li>
+                    <li><strong>Location</strong> - Gaborone, Botswana</li>
+                    <li><strong>Questions?</strong> Call <a href="tel:+26775045963" style="color:#c9304e;">+26775045963</a></li>
+                  </ul>
+                </div>
 
-            <label>Name:</label><br>
-            <input type="text" name="name"><br><br>
+                <div>
+                  <div id="bookingFormWrap">
+                    <div class="form-row-two">
+                      <div class="field-group">
+                        <label for="bfname">First Name</label>
+                        <input type="text" id="bfname" id="bfname" placeholder="e.g. Angela">
+                      </div>
+                      <div class="field-group">
+                        <label for="blname">Last Name</label>
+                        <input type="text" id="blname" placeholder="e,g Modise">
+                      </div>
+                    </div>
 
-            <label>Email:</label><br>
-            <input type="email" name="email"><br><br>
+                    <div class="field-group">
+                      <label for="bemail">Email Address</label>
+                      <input type="email" id="bemail" placeholder="your@email.com">
+                    </div>
 
-            <label>Message:</label><br>
-            <textarea name="message"></textarea><br><br>
+                    <div class="field-group">
+                      <label for="bphone">Phone / WhatsApp</label>
+                      <input type="tel" id="bphone" placeholder="+267 7XX XXXXX">
+                    </div>
 
-            <input type="hidden" name="service" value="Face Scrubbing">
+                    <div class="field-group">
+                      <label for="bservice">Service</label>
+                      <select id="bservice">
+                        <option value=""disabled selected>Select a service</option>
+                        <option value="Face Srubbing">Face Scrubbing - P200</option>
+                        <option value=""Face steaming>Face Steaming - P180</option>
+                        <option value="Natural Glam Makeup">Natural Glam Makeup - P350</option>
+                        <option value="Full Glam Makeup">Full Glam Makeup - P350</option>
+                        <option value="Wedding Glam Makeup">Wedding Glam Makeup - P700</option>
+                      </select>
+                    </div>
 
-            <input type="Book"></button>
+                    <div class="form-row-two">
+                      <div class="field-group">
+                        <label for="bdate">Preferred Date</label>
+                        <input type="date" id="bdate">
+                      </div>
+                      <div class="field-group">
+                        <label for="btime">Preferred Time</label>
+                        <input type="time" id="btime" min="08:00" max="17:30">
+                      </div>
+                    </div>
 
-         </form>
+                    <div class="field-group">
+                      <label for="bnotes">Additional Notes (optional)</label>
+                      <textarea id="bnotes" placeholder="Any special requests, skin sensitivities, or things you should know..."></textarea>
+                    </div>
+
+                    <p id="bookingError" style="display:none; color: #c9304e; font-family:'Lato' , snas-serif; font-size:0.85rem; margin-bottom:12px;"></p>
+
+                    <button class="btn-submit" onclick="submitBooking()">Request Appointment</button>
+                  </div>
+
+                  <div class="booking-success" id="bookingSuccess">
+                    <div class="tick"></div>
+                    <h4>Booking Requested!</h4>
+                    <p>Thank you! We've received your appointment request and will confirm via phone or WhatsApp within 24 hours.<br><br>
+                    Questions? Call us on <a href="tel:+26775045963" style="color:#c9304e;">+26775045963</a></p>
+                  </div>
+                </div>
 
               </div>
-
             </div>
-
-          </main>
+          </div>
+          
         </main>
 
     <footer>
-
       <p>&copy;2026 Lelani`s Beauty Boutique</p>
-      
     </footer>
 
           <!-- Bootstrap JS and dependencies -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      documented.getElementById('bdate').min = new Date().toISOString().split('T')[0];
+
+      function prefillBooking(serviceName) {
+        const select = document.getElementById('bservice');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === serviceName) {
+            select.selectIndex = i;
+            break;
+          }
+        }
+        document.getElementById('bookinSelection').scrollIntoView({ behaviour: 'smooth', block: 'start'});
+      }
+
+      function submitBooking() {
+        const fname   = document.getElementById('bfname').value.trim();
+        const phone   = document.getElementById('bpone').value.trim();
+        const service = document.getElementById('bservice').value;
+        const date    = document.getElementId('bdate').value;
+        const errEl   = document.getElementyById('bookingError');
+
+        if(!fname)   { showErr('Please enter your first name.'); return; }
+        if(!phone)   { showErr('Please enter your phone number so we can confirm your booking.'); return; }
+        if(!service) { showErr('Please select a service.'); return; }
+        if(!date)    { showErr('Please choose a preferred date.'); return; }
+
+        errEl.style.display = 'none';
+        btn.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        setTime(() => {
+          document.getElementById('bookingForWrap').style.display = 'none';
+          document.getElementById('bookingSuccess').style.display = 'block';
+        }, 1200);
+
+        function showErr(msg) {
+          const el = document.getElementById('bookingError');
+          el.textContent = '⚠' + msg;
+          el.style.display = 'block';
+        }
+        
+    </script>
 
   </body>
 </html>
