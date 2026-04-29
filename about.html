@@ -19,9 +19,14 @@
         background: linear-gradient(160deg, #fff8f9 0%, #fff0f3 40%, #fdf6f0 100%);
         min-height: 100vh;
        } 
+        @keyframes fadeUp {
+               from { opacity: 0; transform: translateY(22px); }
+               to { opacity: 1; transform: translateY(0); }
+        }
+               
        .about-hero {
         background: linear-gradient(135deg, #821830 0%, #c9304e 60%, #fb6f92 100%);
-        padding: 52px 24px 44px;
+        padding: 64px 24px 56px;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -30,15 +35,15 @@
         content: '';
         position: absolute;
         top: -80px; right: -80px;
-        width: 300px; height:300px;
-        background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+        width: 320px; height:320px;
+        background: radial-gradient(circle, rgba(255,255,255,0.11) 0%, transparent 65%);
         border-radius: 50%;
       }
       .about-hero::after {
         content: '';
         position: absolute;
-        bottom: -60px; left: -40px;
-        width: 200px; height: 200px;
+        bottom: -70px; left: -50px;
+        width: 240px; height: 240px;
         background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
         border-radius: 50%;
       }
@@ -46,18 +51,19 @@
         font-family: 'Playfair Display', Georgia, serif;
         font-style: italic;
         font-weight: 700;
-        font-size: clamp(2rem, 5vw, 3rem);
+        font-size: clamp(2rem, 5vw, 3.2rem);
         color: #fff;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
         position: relative;
       }
       .about-hero p {
         color: rgba(255,255,255,0.82);
         font-size: 1.05rem;
-        max-width: 500px;
+        max-width: 520px;
         margin: 0 auto;
         font-family: 'Lato', sans-serif;
         position: relative;
+        line-height: 1.7;
       }  
     </style>
         
