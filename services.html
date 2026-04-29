@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Our services - Lelani`s Beauty Boutique</title>
     
@@ -11,7 +11,7 @@
 
     <style>
       body {
-        background: linear-gradient(160deg, #fff8f9 0%, 40%, #fdf6f0 100%);
+        background: linear-gradient(160deg, #fff8f9 0%, #fff0f3 40%, #fdf6f0 100%);
         min-height: 100vh;
       }
 
@@ -35,7 +35,7 @@
         position: absolute;
         bottom: -60px; left: -40px;
         width: 200px; height: 200px;
-        background: radial-gradient(circle, rgba(255,255,255,0.07) 0%; transparent 65%);
+        background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
         border-radius: 50%;
       }
       .services-hero h2 {
@@ -77,7 +77,7 @@
       .section-heading {
         font-family: 'Playfair Display', Georgia, serif;
         font-weight: 700;
-        font-size clamp(1.6rem, 3.5vw, 2.2rem);
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
         color: #821830;
         margin-bottom: 8px;
       }
@@ -121,14 +121,14 @@
       .service-card:nth-child(4) { animation-delay: 0.23s; }
       .service-card:nth-child(5) { animation-delay: 0.29s; }
 
-      ,service-img-wrap {
+      .service-img-wrap {
         position: relative;
         height: 200px;
         overflow: hidden;
         background: #fff0f3;
       }
       .service-img-img {
-        width: 100% height: 100%;
+        width: 100%; height: 100%;
         object-fit: cover;
         transition: transform 0.4s ease;
       }
@@ -143,7 +143,7 @@
         color: #c9304e;
         font-family: 'Lato', sans-serif;
         font-weight: 700;
-        font-size-size: 0.67rem;
+        font-size: 0.67rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         padding: 4px 12px;
@@ -155,7 +155,7 @@
       .service-popular {
         position: absolute;
         top: 14px; right: 14px;
-        background; linear-gradient(135deg, #fb6f92, #c9304e);
+        background: linear-gradient(135deg, #fb6f92, #c9304e);
         color: #fff;
         font-family: 'Lato', sans-serif;
         font-weight: 700;
@@ -185,7 +185,7 @@
         color: #7a5c5c;
         line-height: 1.65;
         margin-bottom: 20px;
-        flex; 1;
+        flex: 1;
       }
       .service-footer {
         display; flex;
@@ -225,8 +225,8 @@
       }
       .btn-book:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 22px rgba(200,48,78,0.34;
-        background: linear-gradient(135deg, #e516d, #a61e3a);
+        box-shadow: 0 8px 22px rgba(200,48,78,0.34);
+        background: linear-gradient(135deg, #e8516d, #a61e3a);
       }
 
       .booking-section {
@@ -241,7 +241,7 @@
 
       .booking-layout {
         display: grid;
-        grid-template-column: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
         gap: 52px;
         align-items: start;
       }
@@ -276,7 +276,7 @@
       .expect-list li:last-child { border-bottom: none; }
       .expect-list li::before {
         content:'✦';
-        position: relative;
+        position: absolute;
         left: 0;
         color: #fb6f92;
         font-size: 0.65rem;
@@ -335,14 +335,14 @@
         cursor: pointer;
         background: linear-gradient(135deg, #fb6f92, #c9304e);
         color: #fff;
-        box-shadow: 0 6px 20px rgba(135deg, #fb6f92, #c9304e);
-        transition; all 0.25s ease;
+        box-shadow: 0 6px 20px rgba(200,48,78,0.22);
+        transition: all 0.25s ease;
         margin-top: 8px;
       }
       .btn-submit:hover {
-        transfrom: translateY(-2px);
+        transform: translateY(-2px);
         box-shadow: 0 10px 28px rgba(200,48,78,0.38);
-        background: linear-gradient(135deg.#e8516d, #a61e3a);
+        background: linear-gradient(135deg, #e8516d, #a61e3a);
       }
 
       .booking-success {
@@ -365,7 +365,7 @@
         font-size: 1.3rem;
         margin-bottom: 8px;
       }
-      .booking-succcess p {
+      .booking-success p {
         font-family:'Lato', sans-serif;
         font-size: 0.9rem;
         color: #7a5c5c;
@@ -407,7 +407,7 @@
         </nav> 
         </header>
 
-        <div class="service-hero">
+        <div class="services-hero">
           <h2>Our Beauty Services</h2>
           <p>Professional treatment and makeup artistry - tailored to make you feel your most beautiful.</p>
         </div>
@@ -418,7 +418,7 @@
           <h2 class="section-heading">Choose Your Treatment</h2>
           <p class="section-sub">All services performed by a trained beauty professional. Walk-ins welcome during hours.</p>
 
-          <div class="service-grid">
+          <div class="services-grid">
           
           <div class="service-card">
             <div class="service-img-wrap">
@@ -441,7 +441,7 @@
               <span class="service-cat">Skin Care</span>
             </div>
             <div class="service-body">
-              <div class="service-name">Face Scrubbing</div>
+              <div class="service-name">Face Steaming</div>
               <div class="service-desc">A relaxing skin detox steaming treatment that opens pores, hydrates the skin, and deeply cleanse to give you a healthy, glowing complextion.</div>
               <div class="service-footer">
               <div class="service-price"><span>P</span>180</div>
@@ -479,7 +479,7 @@
               <div class="service-desc">A soft, everyday makeup look that enhances your natural beauty - perfect for work, casual outings, or daytime events. Fresh and effortlessly glam.</div>
               <div class="service-footer">
               <div class="service-price"><span>P</span>350</div>
-              <button class="btn-book" onclick="prefillBooking('Face Steaming')">Book Now</button>
+              <button class="btn-book" onclick="prefillBooking('Natural Glam Makeup')">Book Now</button>
             </div>
           </div>
           </div>
@@ -541,11 +541,11 @@
                     <div class="form-row-two">
                       <div class="field-group">
                         <label for="bfname">First Name</label>
-                        <input type="text" id="bfname" id="bfname" placeholder="e.g. Angela">
+                        <input type="text" id="bfname" placeholder="e.g. Angela">
                       </div>
                       <div class="field-group">
                         <label for="blname">Last Name</label>
-                        <input type="text" id="blname" placeholder="e,g Modise">
+                        <input type="text" id="blname" placeholder="e.g Modise">
                       </div>
                     </div>
 
@@ -563,10 +563,10 @@
                       <label for="bservice">Service</label>
                       <select id="bservice">
                         <option value=""disabled selected>Select a service</option>
-                        <option value="Face Srubbing">Face Scrubbing - P200</option>
-                        <option value=""Face steaming>Face Steaming - P180</option>
+                        <option value="Face Scrubbing">Face Scrubbing - P200</option>
+                        <option value="Face Steaming">Face Steaming - P180</option>
                         <option value="Natural Glam Makeup">Natural Glam Makeup - P350</option>
-                        <option value="Full Glam Makeup">Full Glam Makeup - P350</option>
+                        <option value="Full Glam Makeup">Full Glam Makeup - P450</option>
                         <option value="Wedding Glam Makeup">Wedding Glam Makeup - P700</option>
                       </select>
                     </div>
@@ -612,11 +612,11 @@
 
           <!-- Bootstrap JS and dependencies -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <script>
-      documented.getElementById('bdate').min = new Date().toISOString().split('T')[0];
+      document.getElementById('bdate').min = new Date().toISOString().split('T')[0];
 
       function prefillBooking(serviceName) {
         const select = document.getElementById('bservice');
@@ -626,14 +626,14 @@
             break;
           }
         }
-        document.getElementById('bookingSelection').scrollIntoView({ behaviour: 'smooth', block: 'start'});
+        document.getElementById('bookingSection').scrollIntoView({ behavior: 'smooth', block: 'start'});
       }
 
       function submitBooking() {
         const fname   = document.getElementById('bfname').value.trim();
-        const phone   = document.getElementById('bpone').value.trim();
+        const phone   = document.getElementById('bphone').value.trim();
         const service = document.getElementById('bservice').value;
-        const date    = document.getElementId('bdate').value;
+        const date    = document.getElementById('bdate').value;
         const errEl   = document.getElementyById('bookingError');
 
         if(!fname)   { showErr('Please enter your first name.'); return; }
@@ -648,7 +648,7 @@
         btn.disabled = true;
 
         setTimeout(() => {
-          document.getElementById('bookingForWrap').style.display = 'none';
+          document.getElementById('bookingFormWrap').style.display = 'none';
           document.getElementById('bookingSuccess').style.display = 'block';
         }, 1200);
       }
