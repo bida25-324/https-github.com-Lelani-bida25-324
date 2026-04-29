@@ -65,6 +65,38 @@
         position: relative;
         line-height: 1.7;
       }  
+
+        .section-wrap { padding: 72px 0 64px; }
+           .section-wrap.alt {
+               background: linear-gradient(160deg, #fff0f3 0%, #fff8f9 100%);
+           }
+           
+        .section-label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.73rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #e8516d;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .section-label::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, #ffc2d1, transparent);
+      }
+      .section-heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+        color: #821830;
+        margin-bottom: 8px;
+      }
+           
     </style>
         
     </head>
@@ -73,7 +105,7 @@
         
         <header>
 
-            <h1>About Us</h1>
+            <h1>Lelani`s Beauty Boutique</h1>
 
              <nav class="navbar navbar-expand-lg navbar-dark ">
             
@@ -137,14 +169,26 @@
             
         </header>
 
-        <main>
+        <main class="container" style="max-width: 860px: 52px 24px 64px;">
+            <div class="about-hero">
+                <h2>About Us</h2>
+            </div>
+
+            <section class="section-wrap">
+                <div class="container" style="max-width: 1060px;">
+                    <div class="story-layout">
+
+                        <div class="story-text" style="animation: fadeUp 0.6s ease both;">
+                            <div class="section-label">Our story</div>
+                            <h2 class="section-heading">Welcome to<br><em style="font-style: italic;">Lelani`s Beauty Boutique</em></h2>
+                            
             <p>Welcome to our beauty and skincare platform, where we are dedicated to helping you look and feel your best. We specialize in professional facial treatments such as face scrubbing and face steaming, designed to refresh, cleanse, and re juvenate your skin</p>
             <p>In addition to our skincare services, we also offer makeup services tailored to different styles and price ranges, making it easy for everyone to find something that suits their needs and budget.</p>
             <p>Our website also provides a convenient online shopping experience, where you can purchase a variety of beauty products, including lipsticks, eyeshadows, and facial care products, Each product is carefully selected to ensure quality and effectiveness.</p>
             <p>Whether you're looking for the perfect beauty, profesional services, or inspiration for your beauty routine, our boutique is here to help you glow with confidence.</p>
             <p>We carefully select our products to suit different skin types and tones, ensuring that everyone can find something that works for them. At the heart of our boutique is a passion for beauty and a commitment to helping you feel confident every day.</p>
             
-            <h2>Our Mission🌟</h2>
+            <h3>Our Mission🌟</h3>
             <p>Our mission is to promote confidence and self-care by offering reliable beauty services and products in one place. We are committed to providing excellent customer services and creating a comfortable experience for all our clients.</p>
             <p>Our goal is to create a welcoming space where every client feels comfortable, valued, and beautiful.Whether you're shopping for the perfect makeup or treating yourself to a refreshing facial, we are here to give you a personalized and enjoyable experience.</p>
             
