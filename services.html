@@ -47,7 +47,7 @@
         margin-bottom: 10px;
         position: relative;
       }
-      .service-hero p {
+      .services-hero p {
         color: rgba(255,255,255,0.82);
         font-size: 1.05rem;
         max-width: 500px;
@@ -127,7 +127,7 @@
         overflow: hidden;
         background: #fff0f3;
       }
-      .service-img-img {
+      .service-img-wrap img {
         width: 100%; height: 100%;
         object-fit: cover;
         transition: transform 0.4s ease;
@@ -188,7 +188,7 @@
         flex: 1;
       }
       .service-footer {
-        display; flex;
+        display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
@@ -438,7 +438,7 @@
            <div class="service-card">
             <div class="service-img-wrap">
               <img src="https://lh5.googleusercontent.com/6ET0XRptBiZjQCS921R84fVToMYrvXR49WKUsJNJuDH44OJsVlfWDd9eoQNKPlXL7kwpT9DwANIbF-nKFRWpbMIxgE4zZAHiWYENoFuPxXw3OUBbr2s-LE_LhwpjGACZ-nPNxyE2?w=600&auto=format&fit=crop" alt="Face Steaming" loading="lazy">
-              <span class="service-cat">Skin Care</span>
+              <span class="service-cat">Makeup</span>
             </div>
             <div class="service-body">
               <div class="service-name">Face steaming</div>
@@ -615,7 +615,7 @@
         const phone   = document.getElementById('bphone').value.trim();
         const service = document.getElementById('bservice').value;
         const date    = document.getElementById('bdate').value;
-        const errEl   = document.getElementyById('bookingError');
+        const errEl   = document.getElementById('bookingError');
 
         if(!fname)   { showErr('Please enter your first name.'); return; }
         if(!phone)   { showErr('Please enter your phone number so we can confirm your booking.'); return; }
