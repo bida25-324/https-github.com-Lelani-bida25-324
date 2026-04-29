@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Our Products - Lelani`s Beauty Boutique</title>
 
@@ -310,15 +310,15 @@
     }
 
     @media (max-width: 576px) {
-        .products-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+        .product-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
         .product-img-wrap { height: 160px; }
         .product-info { padding: 14px 14px 16px; }
         .product-name { font-size: 1rem; }
         .product-price { font-size: 1.1rem; }
-        .btn-cart { padding: 8px 14px; font-size: 0.7rem}
+        .btn-cart { padding: 8px 14px; font-size: 0.7rem; }
     }
     @media (max-width: 400px) {
-        .products-grid { grid-template-columns: 1fr; }
+        .product-grid { grid-template-columns: 1fr; }
     }
 </style>
 </head>
@@ -334,7 +334,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -455,10 +455,17 @@
                         <button class="btn-cart" onclick="addToCart(this, 'Makeup Remover', 100)">Add to Cart</button>
                     </div>
                 </div>
-            </div>
 
         </div>
     </main>
+
+    <div class="cart-bar" id="cartBar">
+        <div>
+            <div class="cart-bar-text" id="cartBarText">0 items in your cart</div>
+        </div>
+        <div class="cartbartotal" id="cartBarTotal">P0</div>
+        <a href="cart.html"><button class="btn-checkout">View Cart</button></a>
+    </div>
 
     <div class="cart-toast" id="cartToast">
         <span class="cart-icon">&#10003;</span>
