@@ -426,45 +426,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <script>
-      document.getElementById('bdate').min = new Date().toISOString().split('T')[0];
 
-      function prefillBooking(serviceName) {
-        const select = document.getElementById('bservice');
-        for (let i = 0; i < select.options.length; i++) {
-          if (select.options[i].value === serviceName) {
-            select.selectedIndex = i;
-            break;
-          }
-        }
-        document.getElementById('bookingSection').scrollIntoView({ behavior: 'smooth', block: 'start'});
-      }
-
-      function submitBooking() {
+      function submitForm() {
         const fname   = document.getElementById('bfname').value.trim();
-        const phone   = document.getElementById('bphone').value.trim();
-        const service = document.getElementById('bservice').value;
-        const date    = document.getElementById('bdate').value;
-        const errEl   = document.getElementyById('bookingError');
+        const phone   = document.getElementById('email').value.trim();
+        const service = document.getElementById('subject').value;
+        const date    = document.getElementById('message').value.trim();
+        const errEl   = document.getElementyById('formError');
 
         if(!fname)   { showErr('Please enter your first name.'); return; }
-        if(!phone)   { showErr('Please enter your phone number so we can confirm your booking.'); return; }
-        if(!service) { showErr('Please select a service.'); return; }
-        if(!date)    { showErr('Please choose a preferred date.'); return; }
+        if(!email)   { showErr('Please enter your valid email address.'); return; }
+        if(!subject) { showErr('Please select what you are enquiring about.'); return; }
+        if(!message)    { showErr('Please choose a preferred date.'); return; }
 
         errEl.style.display = 'none';
 
-        const btn = document.querySelector('.btn-submit');
-        btn.textContent = 'Submitting...';
+        const btn = document.querySelector('.sendBtn');
+        btn.textContent = 'Sending...';
         btn.disabled = true;
 
         setTimeout(() => {
-          document.getElementById('bookingFormWrap').style.display = 'none';
-          document.getElementById('bookingSuccess').style.display = 'block';
+          document.getElementById('contactFormWrap').style.display = 'none';
+          document.getElementById('successMsg').style.display = 'block';
         }, 1200);
       }
 
         function showErr(msg) {
-          const el = document.getElementById('bookingError');
+          const el = document.getElementById('formError');
           el.textContent = '⚠' + msg;
           el.style.display = 'block';
         }
