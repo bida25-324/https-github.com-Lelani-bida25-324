@@ -379,42 +379,31 @@
                     </div>
 
                     <div class="field-group">
-                      <label for="bservice">Service</label>
-                      <select id="bservice">
-                        <option value=""disabled selected>Select a service</option>
-                        <option value="Face Scrubbing">Face Scrubbing - P200</option>
-                        <option value="Face Steaming">Face Steaming - P180</option>
-                        <option value="Natural Glam Makeup">Natural Glam Makeup - P350</option>
-                        <option value="Full Glam Makeup">Full Glam Makeup - P450</option>
-                        <option value="Wedding Glam Makeup">Wedding Glam Makeup - P700</option>
+                      <label for="subject">I am Enquiring about</label>
+                      <select id="subject">
+                        <option value=""disabled selected>Select a topic</option>
+                        <option value="Face Scrubbing">Products</option>
+                        <option value="Face Steaming">Services</option>
+                        <option value="Natural Glam Makeup">Book an Appointment</option>
+                        <option value="Full Glam Makeup">My Order</option>
+                        <option value="Wedding Glam Makeup">Something Else</option>
                       </select>
                     </div>
 
-                    <div class="form-row-two">
-                      <div class="field-group">
-                        <label for="bdate">Preferred Date</label>
-                        <input type="date" id="bdate">
-                      </div>
-                      <div class="field-group">
-                        <label for="btime">Preferred Time</label>
-                        <input type="time" id="btime" min="08:00" max="17:30">
-                      </div>
-                    </div>
-
                     <div class="field-group">
-                      <label for="bnotes">Additional Notes (optional)</label>
-                      <textarea id="bnotes" placeholder="Any special requests, skin sensitivities, or things you should know..."></textarea>
+                      <label for="bnotes">Message</label>
+                      <textarea id="bnotes" placeholder="Tell us how we may help you.."></textarea>
                     </div>
 
                     <p id="bookingError" style="display:none; color: #c9304e; font-family:'Lato' , snas-serif; font-size:0.85rem; margin-bottom:12px;"></p>
 
-                    <button class="btn-submit" onclick="submitBooking()">Request Appointment</button>
+                    <button class="btn-submit" onclick="submitBooking()">Send Message</button>
                   </div>
 
-                  <div class="booking-success" id="bookingSuccess">
+                  <div class="success-msg" id="SuccessMsg">
                     <div class="tick"></div>
-                    <h4>Booking Requested!</h4>
-                    <p>Thank you! We've received your appointment request and will confirm via phone or WhatsApp within 24 hours.<br><br>
+                    <h4>Message Sent!</h4>
+                    <p>Thank you for reaching out. we will get back to you within 24 hours.<br><br>
                     Questions? Call us on <a href="tel:+26775045963" style="color:#c9304e;">+26775045963</a></p>
                   </div>
                 </div>
