@@ -415,7 +415,7 @@
         <main class="container" style="max-width: 1080px; padding-top: 52px;">
 
           <div class="section-label">What we offer</div>
-          <h2 class="section-heading">Vhoose Your Treatment</h2>
+          <h2 class="section-heading">Choose Your Treatment</h2>
           <p class="section-sub">All services performed by a trained beauty professional. Walk-ins welcome during hours.</p>
 
           <div class="service-grid">
@@ -622,11 +622,11 @@
         const select = document.getElementById('bservice');
         for (let i = 0; i < select.options.length; i++) {
           if (select.options[i].value === serviceName) {
-            select.selectIndex = i;
+            select.selectedIndex = i;
             break;
           }
         }
-        document.getElementById('bookinSelection').scrollIntoView({ behaviour: 'smooth', block: 'start'});
+        document.getElementById('bookingSelection').scrollIntoView({ behaviour: 'smooth', block: 'start'});
       }
 
       function submitBooking() {
@@ -642,13 +642,16 @@
         if(!date)    { showErr('Please choose a preferred date.'); return; }
 
         errEl.style.display = 'none';
+
+        const btn = document.querySelector('.btn-submit');
         btn.textContent = 'Submitting...';
         btn.disabled = true;
 
-        setTime(() => {
+        setTimeout(() => {
           document.getElementById('bookingForWrap').style.display = 'none';
           document.getElementById('bookingSuccess').style.display = 'block';
         }, 1200);
+      }
 
         function showErr(msg) {
           const el = document.getElementById('bookingError');
