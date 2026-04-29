@@ -365,7 +365,7 @@
             Payment is accepted at delivery or collection at the Lelani`s Beauty Boutique station. No online payment required.
         </div>
 
-        <div class="products-grid" id="productGrid">
+        <div class="product-grid" id="productGrid">
 
             <div class="product-card" data-category="makeup">
                 <div class="product-img-wrap">
@@ -455,6 +455,7 @@
                         <button class="btn-cart" onclick="addToCart(this, 'Makeup Remover', 100)">Add to Cart</button>
                     </div>
                 </div>
+            </div>
 
         </div>
     </main>
@@ -463,7 +464,7 @@
         <div>
             <div class="cart-bar-text" id="cartBarText">0 items in your cart</div>
         </div>
-        <div class="cartbartotal" id="cartBarTotal">P0</div>
+        <div class="cart-bar-total" id="cartBarTotal">P0</div>
         <a href="cart.html"><button class="btn-checkout">View Cart</button></a>
     </div>
 
@@ -500,11 +501,11 @@
             const bar = document.getElementById('cartBar');
             const count = cartItems.length;
             document.getElementById('cartBarText').textContent =
-                count === 1 ? '1 item in your cart' : count + 'items in your cart';
-            document.getElemenBytId('cartBarTotal').textContent = 'P' + cartTotal;
+                count === 1 ? '1 item in your cart' : count + ' items in your cart';
+            document.getElementById('cartBarTotal').textContent = 'P' + cartTotal;
             bar.classList.add('visible');
 
-            showToast(name + 'added to cart!');
+            showToast(name + ' added to cart!');
         }
 
             function showToast(msg) {
