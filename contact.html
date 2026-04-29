@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"
+<html lang="en">
   
 <head>
   
@@ -8,21 +8,282 @@
     
     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us</title>
+    <title>Contact Us - Lelani`s Beauty Boutique</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-</head>
+<style>
+ body {
+        background: linear-gradient(160deg, #fff8f9 0%, #fff0f3 40%, #fdf6f0 100%);
+        min-height: 100vh;
+      }
+
+      .contact-hero {
+        background: linear-gradient(135deg, #821830 0%, #c9304e 60%, #fb6f92 100%);
+        padding: 52px 24px 44px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .contact-hero::before {
+        content: '';
+        position: absolute;
+        top: -80px; right: -80px;
+        width: 300px; height:300px;
+        background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+        border-radius: 50%;
+      }
+      .content-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -60px; left: -40px;
+        width: 200px; height: 200px;
+        background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
+        border-radius: 50%;
+      }
+      .contact-hero h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: #fff;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .contact-hero p {
+        color: rgba(255,255,255,0.82);
+        font-size: 1.05rem;
+        max-width: 480px;
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        position: relative;
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 32px;
+        padding: 48px 0 64px;
+        align-items: start;
+      }
+
+      .info-col { display: flex-direction: column; gap: 20px; }
+
+      .info-block {
+        background: #fff;
+        border: 1px solid #ffe0e8;
+        border-radius: 20px;
+        padding: 24px 26px;
+        box-shadow: 0 4px 16px rgba(168,50,80,0.07);
+        animation: fadeUp 0.5s ease both;
+      }
+
+      .info-block:nth-child(1) { animation-delay: 0.05s; }
+      .info-block:nth-child(2) { animation-delay: 0.12s; }
+      .info-block:nth-child(3) { animation-delay: 0.19s; }
+      .info-block:nth-child(4) { animation-delay: 0.26s; }
+
+       @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .info-block-label {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #e8516d;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+     
+      .info-block-label .dot {
+        width: 6px; height: 6px;
+        background: #fb6f92;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .contact-link {
+        display: flex;
+        álign-items: center;
+        gap: 14px;
+        text-decoration: none;
+        color: #821830;
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: color 0.2s;
+        padding: 4px 0;
+      }
+      .contact-link:hover ( color: #c9304e; }
+      .contact-link .icon-wrap {
+        width: 40px; height: 40px;
+        background: linear-gradient(135deg, #fff0f3, #fffe0e8);
+        border: 1px solid #ffc2d1;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .contact-link:hover .icon-wrap {
+        background: linear-gradient(135deg, #ffc2d1, #ffb3c6);
+        transform: scale(1.08);
+      }
+
+      .form-col {
+        animation: fadeUp 0.5s ease 0.1s both;
+      } 
+
+       .form-card {
+         background: #fff;
+         border: 1px solid #ffe0e8;
+         border-radius: 24px;
+         padding: 36px 38px;
+         box-shadow: 0 6px 28px rgba(168,50,80,0,0.09);
+       }
+       
+       .form-card {
+         background: #fff;
+         border: 1px solid #ffe0e8;
+         padding: 36px 38px;
+         box-shadow: 0 6px 28px rgba(168,50,80,0.09);
+       }
+
+      .form-card h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #821830;
+        margin-bottom: 6px;
+      }
+
+       .form-card .form-subtitle {
+         font-family: 'Lato', sans-serif;
+         font-size: 0.9rem;
+         color: #c8a4a4;
+         margin-bottom: 28px; }
+
+       .form-row-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .field-group { margin-bottom: 18px; }
+  
+      .field-group label {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.74rem;
+        letter-spacing: 0.09em;
+        color: #c9304e;
+        margin-bottom: 7px;
+      }
+      .field-group input,
+      .field-group select,
+      .field-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        font-family:'Lato', sans-serif;
+        color: #3a2a2a;
+        background: #fff8f9;
+        border: 1.5px solid #ffc2d1;
+        border-radius: 10px;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        appearance: none;
+      }
+      .field-group input:focus,
+      .field-group select:focus,
+      .field-group textarea:focus {
+        border-color: #e8516d;
+        box-shadow: 0 0 0 3px rgba(232,81,109,0.13);
+        background:#fff;
+      }
+      .field-group textarea{ resize: vertical; min-height: 100px; }
+
+      .btn-send {
+        width: 100%;
+        padding: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        background: linear-gradient(135deg, #fb6f92, #c9304e);
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(200,48,78,0.22);
+        transition: all 0.25s ease;
+        margin-top: 8px;
+      }
+      .btn-send:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(200,48,78,0.38);
+        background: linear-gradient(135deg, #e8516d, #a61e3a);
+      }
+      .btn-send:active { transform: translateY(0); }
+      .btn-send.sent {
+        background: linear-gradient(135deg, #3B6D11, #27500A);
+        box-shadow: 0 6px 20px rgba(59,109,17,0.25);
+      }
+
+        .success-msg {
+        display: none;
+        text-align: center;
+        padding: 32px 20px;
+      }
+      .success-msg .tick {
+        width: 64px; height: 64px;
+        background: linear-gradient(135deg, #eaf3de, #c0dd97);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.8rem;
+        margin: 0 auto 18px;
+      }
+      .success-msg h4 {
+        font-family:'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        color: #3B6D11;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+      .success-msg p {
+        font-family:'Lato', sans-serif;
+        font-size: 0.9rem;
+        color: #7a5c5c;
+      }
+  
+      @media (max-width: 860px) {
+        .contact-layout { grid-template-columns: 1fr; }
+        .info-col { order: 2; }
+        .form-col { order: 2; }
+        .form-card { padding: 28px 24px; }
+        .form-row-two { grid-template-columns: 1fr; gap: 0; }
+      }
+      @media (max-width: 480px) {
+        .form-card { padding: 22px 18px; border-radius: 18px; }
+      }   
+       
+</style>
 
   <body>
 
     <header>
 
-      <h1>Contact Us</h1>
+      <h1>Lelani`s Beauty Boutique</h1>
 
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <nav class="navbar navbar-expand-lg navbar-dark">
             
             <div class="container">
                 
@@ -34,9 +295,9 @@
                     
                 </button>
                 
-                <div class="navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
                             
@@ -84,12 +345,86 @@
       
     </header>
 
-    <main>
+     <div class="contact-hero">
+          <h2>Get in Touch</h2>
+          <p>We'd love to here from you - book a service or ask a question.</p>
+        </div>
 
-      <p>If you would like to get in touch with us you may contact us at +26775045962 or email us at lelanibeautyboutique@gmail.com</a></p>
+    <main class="container" style="max-width: 1060px;">
+      <div class="contact-layout">
+
+        <div class="info-col">
+
+         <div>
+                  <div id="bookingFormWrap">
+                    <div class="form-row-two">
+                      <div class="field-group">
+                        <label for="bfname">First Name</label>
+                        <input type="text" id="bfname" placeholder="e.g. Angela">
+                      </div>
+                      <div class="field-group">
+                        <label for="blname">Last Name</label>
+                        <input type="text" id="blname" placeholder="e.g Modise">
+                      </div>
+                    </div>
+
+                    <div class="field-group">
+                      <label for="bemail">Email Address</label>
+                      <input type="email" id="bemail" placeholder="your@email.com">
+                    </div>
+
+                    <div class="field-group">
+                      <label for="bphone">Phone / WhatsApp</label>
+                      <input type="tel" id="bphone" placeholder="+267 7XX XXXXX">
+                    </div>
+
+                    <div class="field-group">
+                      <label for="bservice">Service</label>
+                      <select id="bservice">
+                        <option value=""disabled selected>Select a service</option>
+                        <option value="Face Scrubbing">Face Scrubbing - P200</option>
+                        <option value="Face Steaming">Face Steaming - P180</option>
+                        <option value="Natural Glam Makeup">Natural Glam Makeup - P350</option>
+                        <option value="Full Glam Makeup">Full Glam Makeup - P450</option>
+                        <option value="Wedding Glam Makeup">Wedding Glam Makeup - P700</option>
+                      </select>
+                    </div>
+
+                    <div class="form-row-two">
+                      <div class="field-group">
+                        <label for="bdate">Preferred Date</label>
+                        <input type="date" id="bdate">
+                      </div>
+                      <div class="field-group">
+                        <label for="btime">Preferred Time</label>
+                        <input type="time" id="btime" min="08:00" max="17:30">
+                      </div>
+                    </div>
+
+                    <div class="field-group">
+                      <label for="bnotes">Additional Notes (optional)</label>
+                      <textarea id="bnotes" placeholder="Any special requests, skin sensitivities, or things you should know..."></textarea>
+                    </div>
+
+                    <p id="bookingError" style="display:none; color: #c9304e; font-family:'Lato' , snas-serif; font-size:0.85rem; margin-bottom:12px;"></p>
+
+                    <button class="btn-submit" onclick="submitBooking()">Request Appointment</button>
+                  </div>
+
+                  <div class="booking-success" id="bookingSuccess">
+                    <div class="tick"></div>
+                    <h4>Booking Requested!</h4>
+                    <p>Thank you! We've received your appointment request and will confirm via phone or WhatsApp within 24 hours.<br><br>
+                    Questions? Call us on <a href="tel:+26775045963" style="color:#c9304e;">+26775045963</a></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+        </main>  
     
-    </main>
-
     <footer>
 
       <p>&copy;2026 Lelani`s Beauty Boutique</p>
@@ -100,6 +435,52 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      document.getElementById('bdate').min = new Date().toISOString().split('T')[0];
+
+      function prefillBooking(serviceName) {
+        const select = document.getElementById('bservice');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === serviceName) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+        document.getElementById('bookingSection').scrollIntoView({ behavior: 'smooth', block: 'start'});
+      }
+
+      function submitBooking() {
+        const fname   = document.getElementById('bfname').value.trim();
+        const phone   = document.getElementById('bphone').value.trim();
+        const service = document.getElementById('bservice').value;
+        const date    = document.getElementById('bdate').value;
+        const errEl   = document.getElementyById('bookingError');
+
+        if(!fname)   { showErr('Please enter your first name.'); return; }
+        if(!phone)   { showErr('Please enter your phone number so we can confirm your booking.'); return; }
+        if(!service) { showErr('Please select a service.'); return; }
+        if(!date)    { showErr('Please choose a preferred date.'); return; }
+
+        errEl.style.display = 'none';
+
+        const btn = document.querySelector('.btn-submit');
+        btn.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        setTimeout(() => {
+          document.getElementById('bookingFormWrap').style.display = 'none';
+          document.getElementById('bookingSuccess').style.display = 'block';
+        }, 1200);
+      }
+
+        function showErr(msg) {
+          const el = document.getElementById('bookingError');
+          el.textContent = '⚠' + msg;
+          el.style.display = 'block';
+        }
+        
+    </script>
     
   </body>
 
