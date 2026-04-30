@@ -714,7 +714,6 @@
           { id: 'remover',     name: 'Makeup Remover',    price: 100, img: 'https://conscious-skincare.com/cdn/shop/files/Woman_using_reusable_organic_cotton_makeup_remover_pad_x900.jpg?v=1762425469?w=200&auto=format&fit=crop' , cat: 'Skin Care' },
         ];
 
-        function addToCart(btn, name, price) {
         let cart = [];
         try {
           const saved = sessionStorage.getItem('lelani_cart');
@@ -738,6 +737,7 @@
             emptyEl.style.display = 'block';
             clearWrap.style.display = 'none';
             checkBtn.disabled = true;
+            badge.textContent = '0 items';
             updateSummary();
             return;
           }
@@ -777,7 +777,7 @@
         function updateSummary() {
           const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
           document.getElementById('summarySubtotal').textContent = 'P' + subtotal.toLocaleString();
-          document.getElementById('summaryTotal').textContent = 'P' + subtotal.toLocaleString();
+          document.getElementById('summaryTotal').textContent    = 'P' + subtotal.toLocaleString();
           document.getElementById('summaryDiscount').textContent = subtotal > 0 ? 'Mention at delivery' : '-';
         }
 
@@ -807,12 +807,6 @@
           form.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function showOrderError(msg) {
-          const el = document.getElementById('orderError');
-          el.textContent = '⚠️' + msg;
-          el.style.display = 'block';
-        }
-
         function placeOrder() {
           const fname = document.getElementById('cfname').value.trim();
           const phone = document.getElementById('cphone').value.trim();
@@ -839,6 +833,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
           },1400);
         }
+
+          function showOrderError(msg) {
+          const el = document.getElementById('orderError');
+          el.textContent = '⚠️' + msg;
+          el.style.display = 'block';
+        }
+
 
         if (cart.length === 0) {
           cart = [
