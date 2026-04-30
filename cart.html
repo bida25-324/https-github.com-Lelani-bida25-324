@@ -773,22 +773,79 @@
 
           updateSummary();
         }
+
+        function updateSummary() {
+          const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+          document.getElementById('summarySubtotal').textContent = 'P' + subtotal.toLocalString();
+          document.getElementById('summaryTotal').textContent = 'P' + subtotal.toLocalString();
+          document.getElementById('summaryDiscount').textContent = subtotal > 0 ? 'Mention at deivery' : '-';
+        }
+
+        function changeQty(idx, delta) {
+          cart[idx].qty += delta;
+          if (cart[idx].qty <= 0 ) cart.splice(idx, 1);
+          saveCart();
+          renderCart();
+        }
+
+        function removeItem(idx) {
+          cart.splice(idx, 1);
+          saveCart();
+          renderCart();
+        }
+
+        function clearCart() {
+          cart = [];
+          saveCart();
+          document.getElementById('checkoutForm').style.display = 'none';
+          renderCart();
+        }
+
+        function showCheckout() {
+          const form = document.getElementById('checkoutForm');
+          form.style.display = 'block';
+          form.scrollIntoView({ behaviour: 'smooth', block: 'start' });
+        }
+
+        function placeOrder() {
+          const fname = document.getElementById('cfname').value.trim();
+          const phone = document.getElementById('cphone').value.trim();
+          const area = document.getElementById('carea').value.trim();
+          const errEl = document.getElementById('orderError').value.trim();
+
+          if (!fname) { showOrderError('Please enter your first name.'); return; }
+          if (!phone) { showOrderError('Please enter your phone number so we can confirm your order.'); return; }
+          if (!area) { showOrderError('Please enter your area or suburb for delivery.'); return; }
+
+          errEl.style.display = 'none';
+
+          const btn = document.querySelector('.btn-place-order');
+          btn.textContent = 'Placing order...';
+          btn.disabled = true;
+
+          setTimeout(() => {
+            // Clear cart
+            cart = [];
+            saveCart();
+
+            document.getElementById('cartLayout').style.display = 'none';
+            document.getElementById('recommendedSection').style.display = 'none';
+            document.getElementById('orderSuccess').style.display = 'block';
+            document.getElementById('heroSub').textContent = 'Thank you for your order!';
+
+            window.scrollTo({ top: 0, behaviour: 'smooth' });
+          },1400);
+        }
+
+        if (cart.length === 0) {
+          cart = [
+            { id: 'lipstick', name: 'Matte Lipstick', price: 70, qty: 1 },
+            { id: 'moisterizer', name: 'Moisturizer', price: 180, qty: 2 },
+            ];
+        }
+
+        renderCart();
+      </scipt>
         
-            
-          
-
-
-      </script>
-
-
-
-
-
-
-
-
-      
-
    </body>
-
 </html>
