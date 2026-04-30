@@ -806,6 +806,12 @@
           form.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
+        function showOrderError(msg) {
+          const el = document.getElementById('orderError');
+          el.textContext = '⚠️' = msg;
+          el.style.display = 'block';
+        }
+
         function placeOrder() {
           const fname = document.getElementById('cfname').value.trim();
           const phone = document.getElementById('cphone').value.trim();
