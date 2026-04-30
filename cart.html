@@ -143,7 +143,7 @@
       }
       .cart-item:hover { box-shadow: 0 6px 20px rgba(168,50,80,0.11); }
 
-      .cart-items-img {
+      .cart-item-img {
         width: 72px; height: 72px;
         border-radius: 14px;
         object-fit: cover;
@@ -815,12 +815,10 @@
         function placeOrder() {
           const fname = document.getElementById('cfname').value.trim();
           const phone = document.getElementById('cphone').value.trim();
-          const area = document.getElementById('carea').value.trim();
           const errEl = document.getElementById('orderError');
 
           if (!fname) { showOrderError('Please enter your first name.'); return; }
           if (!phone) { showOrderError('Please enter your phone number so we can confirm your order.'); return; }
-          if (!area) { showOrderError('Please enter your area or suburb for delivery.'); return; }
 
           errEl.style.display = 'none';
 
