@@ -251,7 +251,7 @@
       }
       .summary-line:last-of-type { border-bottom: none; }
       .summary-line.total {
-        font-family: 'Play Display', Georgia, serif;
+        font-family: 'Playfair Display', Georgia, serif;
         font-weight: 700;
         font-size: 1.2rem;
         color: #821830;
@@ -264,7 +264,7 @@
 
       .payment-note {
         border: 1px solid #ffc2d1;
-        border-left: 1px solid #e8516d;
+        border-left: 1px solid 4px solid #e8516d;
         border-radius: 10px;
         padding: 12px 16px;
         margin: 20px 0;
@@ -454,14 +454,14 @@
       .recommended-section { margin-top: 52px; }
       .rec-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill;, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 18px;
         margin-top: 24px;
       }
       .rec-card {
         background: #fff;
         border: 1px solid #ffe0e8;
-        border-radius: 18px
+        border-radius: 18px;
         overflow: hidden;
         box-shadow: 0 3px 12px rgba(168,50,80,0.06);
         transition: transform 0.25s, box-shadow 0.25s;
@@ -630,7 +630,7 @@
           </div>
             
             <div class="field-group">
-              <label for="cfname">Phone / WhatsApp</label>
+              <label for="cphone">Phone / WhatsApp</label>
               <input type="text" id="cphone" placeholder="+267 7XX XXXXX">
             </div>
             
@@ -749,6 +749,7 @@
           badge.textContent = totalQty === 1 ? '1 item' : totalQty + ' items';
 
           cart.forEach((item, idx) => {
+            const prod = PRODUCTS.find(p => p.id === item.id) || {};
             const el = document.createElement('div');
             el.className = 'cart-item';
             el.style.animationDelay = (idx * 0.06) + 's';
